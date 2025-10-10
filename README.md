@@ -11,12 +11,12 @@ Ensure you have Go installed and set up on your system. If not, follow the instr
 Install the `go-api-sdk-jamfpro` package using `go get`:
 
 ```bash
-go get github.com/deploymenttheory/go-api-sdk-jamfpro
+go get github.com/woodleighschool/go-api-sdk-jamfpro
 ```
 
 ## Usage
 
-It's highly recommended to use the [examples](https://github.com/deploymenttheory/go-api-sdk-jamfpro/tree/main/examples) library to get started with the SDK. Here you will find examples of how to use the SDK to perform various operations on your Jamf Pro instance.
+It's highly recommended to use the [examples](https://github.com/woodleighschool/go-api-sdk-jamfpro/tree/main/examples) library to get started with the SDK. Here you will find examples of how to use the SDK to perform various operations on your Jamf Pro instance.
 
 
 ### Authentication Pre-requisites: Obtaining Client ID and Client Secret

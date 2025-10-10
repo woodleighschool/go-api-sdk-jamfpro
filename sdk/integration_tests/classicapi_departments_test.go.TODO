@@ -10,7 +10,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 //go:embed classicapi_departments_test_data.xml

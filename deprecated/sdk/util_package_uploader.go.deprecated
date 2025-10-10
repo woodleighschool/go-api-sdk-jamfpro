@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/feature/s3/manager"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/helpers"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/helpers"
 )
 
 // DoPackageUpload creates a new file in JCDS 2.0 using AWS SDK v2

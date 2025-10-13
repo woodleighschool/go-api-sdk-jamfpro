@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 		log.Fatalf("Failed to initialize Jamf Pro client: %v", err)
 	}
 
-	scriptFilePath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/support_files/scriptfile.sh"
+	scriptFilePath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/support_files/scriptfile.sh"
 
 	scriptNameToUpdate := "Embedded Sample Script" // The name of the script to update.
 

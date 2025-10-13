@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -19,8 +19,8 @@ func main() {
 	}
 
 	// Read the payload from a file
-	payloadFilePath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/support_files/accessibility-chara-nosub-test.mobileconfig"
-	//payloadFilePath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/support_files/accessibility-chara-sub-test.mobileconfig"
+	payloadFilePath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/support_files/accessibility-chara-nosub-test.mobileconfig"
+	//payloadFilePath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/support_files/accessibility-chara-sub-test.mobileconfig"
 	payload, err := readPayloadFromFile(payloadFilePath)
 	if err != nil {
 		log.Fatalf("Error reading payload from file: %v", err)

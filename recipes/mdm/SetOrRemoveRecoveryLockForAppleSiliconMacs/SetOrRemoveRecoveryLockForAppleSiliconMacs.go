@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/modules"
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/modules"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 const (

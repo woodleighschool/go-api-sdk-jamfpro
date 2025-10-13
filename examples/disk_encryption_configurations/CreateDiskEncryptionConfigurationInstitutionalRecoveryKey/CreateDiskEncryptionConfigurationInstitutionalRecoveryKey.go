@@ -9,7 +9,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 	}
 
 	// Path to the certificate
-	filePath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/support_files/filevaultcertificate/FilevaultMaster-sdk.p12"
+	filePath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/support_files/filevaultcertificate/FilevaultMaster-sdk.p12"
 
 	// Read the contents of the file
 	fileContents, err := os.ReadFile(filePath)

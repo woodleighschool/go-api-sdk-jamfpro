@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func loadScriptFromFile(filePath string) (string, error) {
@@ -28,7 +28,7 @@ func main() {
 	}
 
 	// Load the script from a file
-	scriptPath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/support_files/computer_extensioin_attribute.sh"
+	scriptPath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/support_files/computer_extensioin_attribute.sh"
 	scriptContent, err := loadScriptFromFile(scriptPath)
 	if err != nil {
 		log.Fatalf("Failed to load script from file: %v", err)

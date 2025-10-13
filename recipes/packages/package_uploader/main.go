@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	uploader "github.com/deploymenttheory/go-api-sdk-jamfpro/recipes/packages/package_uploader/internal"
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	uploader "github.com/woodleighschool/go-api-sdk-jamfpro/recipes/packages/package_uploader/internal"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 		},
 
 		// Enrollment Restrictions and Cleanup
-		RestrictReenrollment:            false,
+		RestrictReenrollment: false,
 
 		// macOS Management Configuration
 		MacOsEnterpriseEnrollmentEnabled: false,

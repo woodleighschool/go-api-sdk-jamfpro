@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 
 	// Define the computer ID and file path
 	computerID := "21"
-	filePath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/icon/UploadIcon/cat.png"
+	filePath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/icon/UploadIcon/cat.png"
 
 	// Create a slice with the single file path as required by the updated function
 	filePaths := []string{filePath}

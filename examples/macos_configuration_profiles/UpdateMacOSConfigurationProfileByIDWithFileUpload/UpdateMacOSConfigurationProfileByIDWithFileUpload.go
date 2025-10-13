@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	}
 
 	// Load payload from file
-	payloads, err := readPayloadFromFile("/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/macos_configuration_profiles/UpdateMacOSConfigurationProfileByIDWithFileUpload/DOCK.mobileconfig")
+	payloads, err := readPayloadFromFile("/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/macos_configuration_profiles/UpdateMacOSConfigurationProfileByIDWithFileUpload/DOCK.mobileconfig")
 	if err != nil {
 		log.Fatalf("Failed to read payload: %v", err)
 	}

@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 // Function to generate a 26-digit random Recovery Lock password

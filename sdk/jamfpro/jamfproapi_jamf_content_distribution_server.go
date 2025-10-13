@@ -17,7 +17,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	"github.com/aws/aws-sdk-go-v2/feature/s3/manager"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/helpers"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/helpers"
 )
 
 const uriJCDS2 = "/api/v1/jcds"

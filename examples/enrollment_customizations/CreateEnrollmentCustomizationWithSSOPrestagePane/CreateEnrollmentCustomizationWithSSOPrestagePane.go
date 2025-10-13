@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 		log.Fatalf("Failed to initialize Jamf Pro client: %v", err)
 	}
 
-	imagePath := "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/enrollment_customizations/UploadEnrollmentCustomizationsImage/self_service.png"
+	imagePath := "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/enrollment_customizations/UploadEnrollmentCustomizationsImage/self_service.png"
 
 	// Upload the image file
 	imageResponse, err := client.UploadEnrollmentCustomizationsImage(imagePath)

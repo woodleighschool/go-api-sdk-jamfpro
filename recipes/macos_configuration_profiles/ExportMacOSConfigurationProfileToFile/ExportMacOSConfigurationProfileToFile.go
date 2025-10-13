@@ -10,14 +10,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 	"howett.net/plist"
 )
 
 // Global configuration variables
 var (
 	configFilePath = "/Users/dafyddwatkins/localtesting/jamfpro/clientconfig.json"
-	exportDir      = "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/recipes/macos_configuration_profiles/ExportMacOSConfigurationProfileToFile/"
+	exportDir      = "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/recipes/macos_configuration_profiles/ExportMacOSConfigurationProfileToFile/"
 	profileID      = "5510" // Set your desired profile ID here
 )
 

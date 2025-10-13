@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 		"policies", // resource type / computers / mobiledevices / enrollment profiles / printers / peripherals / policies /  ebooks / mobiledeviceapplicationsicon / mobiledeviceapplicationsipa / diskencryptionconfigurations
 		"id",       // idType - can be either 'id' or 'name'.
 		"2419",     // identifier
-		"/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/icon/UploadIcon/cat.png", // filePath
+		"/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/icon/UploadIcon/cat.png", // filePath
 		false, // forceIpaUpload
 	)
 	if err != nil {

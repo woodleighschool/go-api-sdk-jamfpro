@@ -180,7 +180,7 @@ type MobileDeviceSubsetNetwork struct {
 	IMEI                     string `xml:"imei"`
 	ICCID                    string `xml:"iccid"`
 	CurrentCarrierNetwork    string `xml:"current_carrier_network"`
-	CarrierSettingsVersion   int    `xml:"carrier_settings_version"`
+	CarrierSettingsVersion   string `xml:"carrier_settings_version"`
 	CurrentMobileCountryCode int    `xml:"current_mobile_country_code"`
 	CurrentMobileNetworkCode int    `xml:"current_mobile_network_code"`
 	HomeMobileCountryCode    int    `xml:"home_mobile_country_code"`

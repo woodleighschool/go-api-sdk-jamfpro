@@ -9,11 +9,11 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/deploymenttheory/go-api-sdk-jamfpro/sdk/jamfpro"
+	"github.com/woodleighschool/go-api-sdk-jamfpro/sdk/jamfpro"
 )
 
 // path to export the scripts
-const exportPath = "/Users/dafyddwatkins/GitHub/deploymenttheory/go-api-sdk-jamfpro/examples/support_files/export"
+const exportPath = "/Users/dafyddwatkins/GitHub/woodleighschool/go-api-sdk-jamfpro/examples/support_files/export"
 
 func sanitizeFileName(fileName string) string {
 	// Remove any characters that are not letters, numbers, hyphens, or underscores

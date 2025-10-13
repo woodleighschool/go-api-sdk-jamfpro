@@ -630,7 +630,7 @@ func (c *Client) GetComputerInventoryByName(name string) (*ResourceComputerInven
 
 // UpdateComputerInventoryByID updates a specific computer's inventory information by its ID.
 func (c *Client) UpdateComputerInventoryByID(id string, inventoryUpdate *ResourceComputerInventory) (*ResourceComputerInventory, error) {
-	endpoint := fmt.Sprintf("%s/%s", uriComputersInventory, id)
+	endpoint := fmt.Sprintf("%s-detail/%s", uriComputersInventory, id)
 
 	var updatedInventory ResourceComputerInventory
 	resp, err := c.HTTP.DoRequest("PATCH", endpoint, inventoryUpdate, &updatedInventory)

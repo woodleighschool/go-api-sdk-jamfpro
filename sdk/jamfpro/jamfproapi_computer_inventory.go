@@ -32,32 +32,32 @@ type ResponseComputerInventoryList struct {
 
 // ResponseComputerInventory represents an individual computer from the inventory.
 type ResourceComputerInventory struct {
-	ID                    string                                        `json:"id"`
-	UDID                  string                                        `json:"udid"`
-	General               ComputerInventorySubsetGeneral                `json:"general"`
-	DiskEncryption        ComputerInventorySubsetDiskEncryption         `json:"diskEncryption"`
-	Purchasing            ComputerInventorySubsetPurchasing             `json:"purchasing"`
-	Applications          []ComputerInventorySubsetApplication          `json:"applications"`
-	Storage               ComputerInventorySubsetStorage                `json:"storage"`
-	UserAndLocation       ComputerInventorySubsetUserAndLocation        `json:"userAndLocation"`
-	ConfigurationProfiles []ComputerInventorySubsetConfigurationProfile `json:"configurationProfiles"`
-	Printers              []ComputerInventorySubsetPrinter              `json:"printers"`
-	Services              []ComputerInventorySubsetService              `json:"services"`
-	Hardware              ComputerInventorySubsetHardware               `json:"hardware"`
-	LocalUserAccounts     []ComputerInventorySubsetLocalUserAccount     `json:"localUserAccounts"`
-	Certificates          []ComputerInventorySubsetCertificate          `json:"certificates"`
-	Attachments           []ComputerInventorySubsetAttachment           `json:"attachments"`
-	Plugins               []ComputerInventorySubsetPlugin               `json:"plugins"`
-	PackageReceipts       ComputerInventorySubsetPackageReceipts        `json:"packageReceipts"`
-	Fonts                 []ComputerInventorySubsetFont                 `json:"fonts"`
-	Security              ComputerInventorySubsetSecurity               `json:"security"`
-	OperatingSystem       ComputerInventorySubsetOperatingSystem        `json:"operatingSystem"`
-	LicensedSoftware      []ComputerInventorySubsetLicensedSoftware     `json:"licensedSoftware"`
-	Ibeacons              []ComputerInventorySubsetIBeacon              `json:"ibeacons"`
-	SoftwareUpdates       []ComputerInventorySubsetSoftwareUpdate       `json:"softwareUpdates"`
-	ExtensionAttributes   []ComputerInventorySubsetExtensionAttribute   `json:"extensionAttributes"`
-	ContentCaching        ComputerInventorySubsetContentCaching         `json:"contentCaching"`
-	GroupMemberships      []ComputerInventorySubsetGroupMembership      `json:"groupMemberships"`
+	ID                    *string                                        `json:"id,omitempty"`
+	UDID                  *string                                        `json:"udid,omitempty"`
+	General               *ComputerInventorySubsetGeneral                `json:"general,omitempty"`
+	DiskEncryption        *ComputerInventorySubsetDiskEncryption         `json:"diskEncryption,omitempty"`
+	Purchasing            *ComputerInventorySubsetPurchasing             `json:"purchasing,omitempty"`
+	Applications          []*ComputerInventorySubsetApplication          `json:"applications,omitempty"`
+	Storage               *ComputerInventorySubsetStorage                `json:"storage,omitempty"`
+	UserAndLocation       *ComputerInventorySubsetUserAndLocation        `json:"userAndLocation,omitempty"`
+	ConfigurationProfiles []*ComputerInventorySubsetConfigurationProfile `json:"configurationProfiles,omitempty"`
+	Printers              []*ComputerInventorySubsetPrinter              `json:"printers,omitempty"`
+	Services              []*ComputerInventorySubsetService              `json:"services,omitempty"`
+	Hardware              *ComputerInventorySubsetHardware               `json:"hardware,omitempty"`
+	LocalUserAccounts     []*ComputerInventorySubsetLocalUserAccount     `json:"localUserAccounts,omitempty"`
+	Certificates          []*ComputerInventorySubsetCertificate          `json:"certificates,omitempty"`
+	Attachments           []*ComputerInventorySubsetAttachment           `json:"attachments,omitempty"`
+	Plugins               []*ComputerInventorySubsetPlugin               `json:"plugins,omitempty"`
+	PackageReceipts       *ComputerInventorySubsetPackageReceipts        `json:"packageReceipts,omitempty"`
+	Fonts                 []*ComputerInventorySubsetFont                 `json:"fonts,omitempty"`
+	Security              *ComputerInventorySubsetSecurity               `json:"security,omitempty"`
+	OperatingSystem       *ComputerInventorySubsetOperatingSystem        `json:"operatingSystem,omitempty"`
+	LicensedSoftware      []*ComputerInventorySubsetLicensedSoftware     `json:"licensedSoftware,omitempty"`
+	Ibeacons              []*ComputerInventorySubsetIBeacon              `json:"ibeacons,omitempty"`
+	SoftwareUpdates       []*ComputerInventorySubsetSoftwareUpdate       `json:"softwareUpdates,omitempty"`
+	ExtensionAttributes   []*ComputerInventorySubsetExtensionAttribute   `json:"extensionAttributes,omitempty"`
+	ContentCaching        *ComputerInventorySubsetContentCaching         `json:"contentCaching,omitempty"`
+	GroupMemberships      []*ComputerInventorySubsetGroupMembership      `json:"groupMemberships,omitempty"`
 }
 
 // Subsets
@@ -65,467 +65,469 @@ type ResourceComputerInventory struct {
 // General
 
 type ComputerInventorySubsetGeneral struct {
-	Name                                     string                                         `json:"name"`
-	LastIpAddress                            string                                         `json:"lastIpAddress"`
-	LastReportedIp                           string                                         `json:"lastReportedIp"`
-	LastReportedIpV4                         string                                         `json:"lastReportedIpV4"`
-	LastReportedIpV6                         string                                         `json:"lastReportedIpV6"`
-	JamfBinaryVersion                        string                                         `json:"jamfBinaryVersion"`
-	Platform                                 string                                         `json:"platform"`
-	Barcode1                                 string                                         `json:"barcode1"`
-	Barcode2                                 string                                         `json:"barcode2"`
-	AssetTag                                 string                                         `json:"assetTag"`
-	RemoteManagement                         ComputerInventorySubsetGeneralRemoteManagement `json:"remoteManagement"`
-	Supervised                               bool                                           `json:"supervised"`
-	MdmCapable                               ComputerInventorySubsetGeneralMdmCapable       `json:"mdmCapable"`
-	ReportDate                               string                                         `json:"reportDate"`
-	LastContactTime                          string                                         `json:"lastContactTime"`
-	LastCloudBackupDate                      string                                         `json:"lastCloudBackupDate"`
-	LastEnrolledDate                         string                                         `json:"lastEnrolledDate"`
-	MdmProfileExpiration                     string                                         `json:"mdmProfileExpiration"`
-	InitialEntryDate                         string                                         `json:"initialEntryDate"`
-	DistributionPoint                        string                                         `json:"distributionPoint"`
-	EnrollmentMethod                         ComputerInventorySubsetGeneralEnrollmentMethod `json:"enrollmentMethod"`
-	Site                                     SharedResourceSiteProAPI                       `json:"site"`
-	ItunesStoreAccountActive                 bool                                           `json:"itunesStoreAccountActive"`
-	EnrolledViaAutomatedDeviceEnrollment     bool                                           `json:"enrolledViaAutomatedDeviceEnrollment"`
-	UserApprovedMdm                          bool                                           `json:"userApprovedMdm"`
-	DeclarativeDeviceManagementEnabled       bool                                           `json:"declarativeDeviceManagementEnabled"`
-	ExtensionAttributes                      []ComputerInventorySubsetExtensionAttribute    `json:"extensionAttributes"`
-	ManagementId                             string                                         `json:"managementId"`
-	LastLoggedInUsernameSelfService          string                                         `json:"lastLoggedInUsernameSelfService"`
-	LastLoggedInUsernameSelfServiceTimestamp string                                         `json:"lastLoggedInUsernameSelfServiceTimestamp"`
-	LastLoggedInUsernameBinary               string                                         `json:"lastLoggedInUsernameBinary"`
-	LastLoggedInUsernameBinaryTimestamp      string                                         `json:"lastLoggedInUsernameBinaryTimestamp"`
+	Name                                     *string                                         `json:"name,omitempty"`
+	LastIpAddress                            *string                                         `json:"lastIpAddress,omitempty"`
+	LastReportedIp                           *string                                         `json:"lastReportedIp,omitempty"`
+	LastReportedIpV4                         *string                                         `json:"lastReportedIpV4"`
+	LastReportedIpV6                         *string                                         `json:"lastReportedIpV6"`
+	JamfBinaryVersion                        *string                                         `json:"jamfBinaryVersion,omitempty"`
+	Platform                                 *string                                         `json:"platform,omitempty"`
+	Barcode1                                 *string                                         `json:"barcode1"`
+	Barcode2                                 *string                                         `json:"barcode2"`
+	AssetTag                                 *string                                         `json:"assetTag,omitempty"`
+	RemoteManagement                         *ComputerInventorySubsetGeneralRemoteManagement `json:"remoteManagement,omitempty"`
+	Supervised                               *bool                                           `json:"supervised,omitempty"`
+	MdmCapable                               *ComputerInventorySubsetGeneralMdmCapable       `json:"mdmCapable,omitempty"`
+	ReportDate                               *string                                         `json:"reportDate,omitempty"`
+	LastContactTime                          *string                                         `json:"lastContactTime,omitempty"`
+	LastCloudBackupDate                      *string                                         `json:"lastCloudBackupDate,omitempty"`
+	LastEnrolledDate                         *string                                         `json:"lastEnrolledDate,omitempty"`
+	MdmProfileExpiration                     *string                                         `json:"mdmProfileExpiration,omitempty"`
+	InitialEntryDate                         *string                                         `json:"initialEntryDate,omitempty"`
+	DistributionPoint                        *string                                         `json:"distributionPoint,omitempty"`
+	EnrollmentMethod                         *ComputerInventorySubsetGeneralEnrollmentMethod `json:"enrollmentMethod,omitempty"`
+	Site                                     *SharedResourceSiteProAPI                       `json:"site,omitempty"`
+	ItunesStoreAccountActive                 *bool                                           `json:"itunesStoreAccountActive,omitempty"`
+	EnrolledViaAutomatedDeviceEnrollment     *bool                                           `json:"enrolledViaAutomatedDeviceEnrollment,omitempty"`
+	UserApprovedMdm                          *bool                                           `json:"userApprovedMdm,omitempty"`
+	DeclarativeDeviceManagementEnabled       *bool                                           `json:"declarativeDeviceManagementEnabled,omitempty"`
+	ExtensionAttributes                      []*ComputerInventorySubsetExtensionAttribute    `json:"extensionAttributes,omitempty"`
+	ManagementId                             *string                                         `json:"managementId,omitempty"`
+	LastLoggedInUsernameSelfService          *string                                         `json:"lastLoggedInUsernameSelfService,omitempty"`
+	LastLoggedInUsernameSelfServiceTimestamp *string                                         `json:"lastLoggedInUsernameSelfServiceTimestamp,omitempty"`
+	LastLoggedInUsernameBinary               *string                                         `json:"lastLoggedInUsernameBinary,omitempty"`
+	LastLoggedInUsernameBinaryTimestamp      *string                                         `json:"lastLoggedInUsernameBinaryTimestamp,omitempty"`
 }
 
 type ComputerInventorySubsetGeneralRemoteManagement struct {
-	Managed            bool   `json:"managed"`
-	ManagementUsername string `json:"managementUsername"`
+	Managed            *bool   `json:"managed,omitempty"`
+	ManagementUsername *string `json:"managementUsername,omitempty"`
 }
 
 type ComputerInventorySubsetGeneralMdmCapable struct {
-	Capable            bool     `json:"capable"`
-	CapableUsers       []string `json:"capableUsers"`
-	UserManagementInfo []struct {
-		CapableUser  string `json:"capableUser"`
-		ManagementId string `json:"managementId"`
-	} `json:"userManagementInfo"`
+	Capable            *bool                                           `json:"capable,omitempty"`
+	CapableUsers       []*string                                       `json:"capableUsers,omitempty"`
+	UserManagementInfo []*ComputerInventorySubsetGeneralMdmCapableUser `json:"userManagementInfo,omitempty"`
+}
+
+type ComputerInventorySubsetGeneralMdmCapableUser struct {
+	CapableUser  *string `json:"capableUser,omitempty"`
+	ManagementID *string `json:"managementId,omitempty"`
 }
 
 type ComputerInventorySubsetGeneralEnrollmentMethod struct {
-	ID         string `json:"id"`
-	ObjectName string `json:"objectName"`
-	ObjectType string `json:"objectType"`
+	ID         *string `json:"id,omitempty"`
+	ObjectName *string `json:"objectName,omitempty"`
+	ObjectType *string `json:"objectType,omitempty"`
 }
 
 // Disk Encryption
 
 type ComputerInventorySubsetDiskEncryption struct {
-	BootPartitionEncryptionDetails      ComputerInventorySubsetBootPartitionEncryptionDetails `json:"bootPartitionEncryptionDetails"`
-	IndividualRecoveryKeyValidityStatus string                                                `json:"individualRecoveryKeyValidityStatus"`
-	InstitutionalRecoveryKeyPresent     bool                                                  `json:"institutionalRecoveryKeyPresent"`
-	DiskEncryptionConfigurationName     string                                                `json:"diskEncryptionConfigurationName"`
-	FileVault2Enabled                   bool                                                  `json:"fileVault2Enabled"`
-	FileVault2EnabledUserNames          []string                                              `json:"fileVault2EnabledUserNames"`
-	FileVault2EligibilityMessage        string                                                `json:"fileVault2EligibilityMessage"`
+	BootPartitionEncryptionDetails      *ComputerInventorySubsetBootPartitionEncryptionDetails `json:"bootPartitionEncryptionDetails,omitempty"`
+	IndividualRecoveryKeyValidityStatus *string                                                `json:"individualRecoveryKeyValidityStatus,omitempty"`
+	InstitutionalRecoveryKeyPresent     *bool                                                  `json:"institutionalRecoveryKeyPresent,omitempty"`
+	DiskEncryptionConfigurationName     *string                                                `json:"diskEncryptionConfigurationName,omitempty"`
+	FileVault2Enabled                   *bool                                                  `json:"fileVault2Enabled"`
+	FileVault2EnabledUserNames          []*string                                              `json:"fileVault2EnabledUserNames"`
+	FileVault2EligibilityMessage        *string                                                `json:"fileVault2EligibilityMessage"`
 }
 
 // Purchasing
 
 type ComputerInventorySubsetPurchasing struct {
-	Leased              bool                                        `json:"leased"`
-	Purchased           bool                                        `json:"purchased"`
-	PoNumber            string                                      `json:"poNumber"`
-	PoDate              string                                      `json:"poDate"`
-	Vendor              string                                      `json:"vendor"`
-	WarrantyDate        string                                      `json:"warrantyDate"`
-	AppleCareId         string                                      `json:"appleCareId"`
-	LeaseDate           string                                      `json:"leaseDate"`
-	PurchasePrice       string                                      `json:"purchasePrice"`
-	LifeExpectancy      int                                         `json:"lifeExpectancy"`
-	PurchasingAccount   string                                      `json:"purchasingAccount"`
-	PurchasingContact   string                                      `json:"purchasingContact"`
-	ExtensionAttributes []ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes"`
+	Leased              *bool                                        `json:"leased,omitempty"`
+	Purchased           *bool                                        `json:"purchased,omitempty"`
+	PoNumber            *string                                      `json:"poNumber,omitempty"`
+	PoDate              *string                                      `json:"poDate,omitempty"`
+	Vendor              *string                                      `json:"vendor,omitempty"`
+	WarrantyDate        *string                                      `json:"warrantyDate,omitempty"`
+	AppleCareId         *string                                      `json:"appleCareId,omitempty"`
+	LeaseDate           *string                                      `json:"leaseDate,omitempty"`
+	PurchasePrice       *string                                      `json:"purchasePrice,omitempty"`
+	LifeExpectancy      *int                                         `json:"lifeExpectancy,omitempty"`
+	PurchasingAccount   *string                                      `json:"purchasingAccount,omitempty"`
+	PurchasingContact   *string                                      `json:"purchasingContact,omitempty"`
+	ExtensionAttributes []*ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes,omitempty"`
 }
 
 // Applications
 
 type ComputerInventorySubsetApplication struct {
-	Name              string `json:"name"`
-	Path              string `json:"path"`
-	Version           string `json:"version"`
-	MacAppStore       bool   `json:"macAppStore"`
-	SizeMegabytes     int    `json:"sizeMegabytes"`
-	BundleId          string `json:"bundleId"`
-	UpdateAvailable   bool   `json:"updateAvailable"`
-	ExternalVersionId string `json:"externalVersionId"`
+	Name              *string `json:"name,omitempty"`
+	Path              *string `json:"path,omitempty"`
+	Version           *string `json:"version,omitempty"`
+	MacAppStore       *bool   `json:"macAppStore,omitempty"`
+	SizeMegabytes     *int    `json:"sizeMegabytes,omitempty"`
+	BundleId          *string `json:"bundleId,omitempty"`
+	UpdateAvailable   *bool   `json:"updateAvailable,omitempty"`
+	ExternalVersionId *string `json:"externalVersionId,omitempty"`
 }
 
 // Storage
 
 type ComputerInventorySubsetStorage struct {
-	BootDriveAvailableSpaceMegabytes int                                  `json:"bootDriveAvailableSpaceMegabytes"`
-	Disks                            []ComputerInventorySubsetStorageDisk `json:"disks"`
+	BootDriveAvailableSpaceMegabytes *int                                  `json:"bootDriveAvailableSpaceMegabytes,omitempty"`
+	Disks                            []*ComputerInventorySubsetStorageDisk `json:"disks,omitempty"`
 }
 
 type ComputerInventorySubsetStorageDisk struct {
-	ID            string                                        `json:"id"`
-	Device        string                                        `json:"device"`
-	Model         string                                        `json:"model"`
-	Revision      string                                        `json:"revision"`
-	SerialNumber  string                                        `json:"serialNumber"`
-	SizeMegabytes int                                           `json:"sizeMegabytes"`
-	SmartStatus   string                                        `json:"smartStatus"`
-	Type          string                                        `json:"type"`
-	Partitions    []ComputerInventorySubsetStorageDiskPartition `json:"partitions"`
+	ID            *string                                        `json:"id,omitempty"`
+	Device        *string                                        `json:"device,omitempty"`
+	Model         *string                                        `json:"model,omitempty"`
+	Revision      *string                                        `json:"revision,omitempty"`
+	SerialNumber  *string                                        `json:"serialNumber,omitempty"`
+	SizeMegabytes *int                                           `json:"sizeMegabytes,omitempty"`
+	SmartStatus   *string                                        `json:"smartStatus,omitempty"`
+	Type          *string                                        `json:"type,omitempty"`
+	Partitions    []*ComputerInventorySubsetStorageDiskPartition `json:"partitions,omitempty"`
 }
 
 type ComputerInventorySubsetStorageDiskPartition struct {
-	Name                      string `json:"name"`
-	SizeMegabytes             int    `json:"sizeMegabytes"`
-	AvailableMegabytes        int    `json:"availableMegabytes"`
-	PartitionType             string `json:"partitionType"`
-	PercentUsed               int    `json:"percentUsed"`
-	FileVault2State           string `json:"fileVault2State"`
-	FileVault2ProgressPercent int    `json:"fileVault2ProgressPercent"`
-	LvmManaged                bool   `json:"lvmManaged"`
+	Name                      *string `json:"name,omitempty"`
+	SizeMegabytes             *int    `json:"sizeMegabytes,omitempty"`
+	AvailableMegabytes        *int    `json:"availableMegabytes,omitempty"`
+	PartitionType             *string `json:"partitionType,omitempty"`
+	PercentUsed               *int    `json:"percentUsed,omitempty"`
+	FileVault2State           *string `json:"fileVault2State"`
+	FileVault2ProgressPercent *int    `json:"fileVault2ProgressPercent"`
+	LvmManaged                *bool   `json:"lvmManaged,omitempty"`
 }
 
 // User and Location
 
 type ComputerInventorySubsetUserAndLocation struct {
-	Username            string                                      `json:"username"`
-	Realname            string                                      `json:"realname"`
-	Email               string                                      `json:"email"`
-	Position            string                                      `json:"position"`
-	Phone               string                                      `json:"phone"`
-	DepartmentId        string                                      `json:"departmentId"`
-	BuildingId          string                                      `json:"buildingId"`
-	Room                string                                      `json:"room"`
-	ExtensionAttributes []ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes"`
+	Username            *string                                      `json:"username,omitempty"`
+	Realname            *string                                      `json:"realname,omitempty"`
+	Email               *string                                      `json:"email,omitempty"`
+	Position            *string                                      `json:"position,omitempty"`
+	Phone               *string                                      `json:"phone,omitempty"`
+	DepartmentId        *string                                      `json:"departmentId,omitempty"`
+	BuildingId          *string                                      `json:"buildingId,omitempty"`
+	Room                *string                                      `json:"room,omitempty"`
+	ExtensionAttributes []*ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes,omitempty"`
 }
 
 // Configuration Profiles
 
 type ComputerInventorySubsetConfigurationProfile struct {
-	ID                string `json:"id"`
-	Username          string `json:"username"`
-	LastInstalled     string `json:"lastInstalled"`
-	Removable         bool   `json:"removable"`
-	DisplayName       string `json:"displayName"`
-	ProfileIdentifier string `json:"profileIdentifier"`
+	ID                *string `json:"id,omitempty"`
+	Username          *string `json:"username,omitempty"`
+	LastInstalled     *string `json:"lastInstalled,omitempty"`
+	Removable         *bool   `json:"removable,omitempty"`
+	DisplayName       *string `json:"displayName,omitempty"`
+	ProfileIdentifier *string `json:"profileIdentifier,omitempty"`
 }
 
 // Printers
 
 type ComputerInventorySubsetPrinter struct {
-	Name     string `json:"name"`
-	Type     string `json:"type"`
-	URI      string `json:"uri"`
-	Location string `json:"location"`
+	Name     *string `json:"name,omitempty"`
+	Type     *string `json:"type,omitempty"`
+	URI      *string `json:"uri,omitempty"`
+	Location *string `json:"location,omitempty"`
 }
 
 // Services
 
 type ComputerInventorySubsetService struct {
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 // Hardware
 
 type ComputerInventorySubsetHardware struct {
-	Make                   string                                      `json:"make"`
-	Model                  string                                      `json:"model"`
-	ModelIdentifier        string                                      `json:"modelIdentifier"`
-	SerialNumber           string                                      `json:"serialNumber"`
-	ProcessorSpeedMhz      int                                         `json:"processorSpeedMhz"`
-	ProcessorCount         int                                         `json:"processorCount"`
-	CoreCount              int                                         `json:"coreCount"`
-	ProcessorType          string                                      `json:"processorType"`
-	ProcessorArchitecture  string                                      `json:"processorArchitecture"`
-	BusSpeedMhz            int                                         `json:"busSpeedMhz"`
-	CacheSizeKilobytes     int                                         `json:"cacheSizeKilobytes"`
-	NetworkAdapterType     string                                      `json:"networkAdapterType"`
-	MacAddress             string                                      `json:"macAddress"`
-	AltNetworkAdapterType  string                                      `json:"altNetworkAdapterType"`
-	AltMacAddress          string                                      `json:"altMacAddress"`
-	TotalRamMegabytes      int                                         `json:"totalRamMegabytes"`
-	OpenRamSlots           int                                         `json:"openRamSlots"`
-	BatteryCapacityPercent int                                         `json:"batteryCapacityPercent"`
-	BatteryHealth          string                                      `json:"batteryHealth"`
-	SmcVersion             string                                      `json:"smcVersion"`
-	NicSpeed               string                                      `json:"nicSpeed"`
-	OpticalDrive           string                                      `json:"opticalDrive"`
-	BootRom                string                                      `json:"bootRom"`
-	BleCapable             bool                                        `json:"bleCapable"`
-	SupportsIosAppInstalls bool                                        `json:"supportsIosAppInstalls"`
-	AppleSilicon           bool                                        `json:"appleSilicon"`
-	ProvisioningUdid       string                                      `json:"provisioningUdid"`
-	ExtensionAttributes    []ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes"`
+	Make                   *string                                      `json:"make,omitempty"`
+	Model                  *string                                      `json:"model,omitempty"`
+	ModelIdentifier        *string                                      `json:"modelIdentifier,omitempty"`
+	SerialNumber           *string                                      `json:"serialNumber,omitempty"`
+	ProcessorSpeedMhz      *int                                         `json:"processorSpeedMhz,omitempty"`
+	ProcessorCount         *int                                         `json:"processorCount,omitempty"`
+	CoreCount              *int                                         `json:"coreCount,omitempty"`
+	ProcessorType          *string                                      `json:"processorType,omitempty"`
+	ProcessorArchitecture  *string                                      `json:"processorArchitecture,omitempty"`
+	BusSpeedMhz            *int                                         `json:"busSpeedMhz,omitempty"`
+	CacheSizeKilobytes     *int                                         `json:"cacheSizeKilobytes,omitempty"`
+	NetworkAdapterType     *string                                      `json:"networkAdapterType,omitempty"`
+	MacAddress             *string                                      `json:"macAddress,omitempty"`
+	AltNetworkAdapterType  *string                                      `json:"altNetworkAdapterType,omitempty"`
+	AltMacAddress          *string                                      `json:"altMacAddress,omitempty"`
+	TotalRamMegabytes      *int                                         `json:"totalRamMegabytes,omitempty"`
+	OpenRamSlots           *int                                         `json:"openRamSlots,omitempty"`
+	BatteryCapacityPercent *int                                         `json:"batteryCapacityPercent,omitempty"`
+	BatteryHealth          *string                                      `json:"batteryHealth,omitempty"`
+	SmcVersion             *string                                      `json:"smcVersion,omitempty"`
+	NicSpeed               *string                                      `json:"nicSpeed,omitempty"`
+	OpticalDrive           *string                                      `json:"opticalDrive,omitempty"`
+	BootRom                *string                                      `json:"bootRom,omitempty"`
+	BleCapable             *bool                                        `json:"bleCapable,omitempty"`
+	SupportsIosAppInstalls *bool                                        `json:"supportsIosAppInstalls,omitempty"`
+	AppleSilicon           *bool                                        `json:"appleSilicon,omitempty"`
+	ProvisioningUdid       *string                                      `json:"provisioningUdid,omitempty"`
+	ExtensionAttributes    []*ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes,omitempty"`
 }
 
 // Local User Accounts
 
 type ComputerInventorySubsetLocalUserAccount struct {
-	UID                            string `json:"uid"`
-	UserGuid                       string `json:"userGuid"`
-	Username                       string `json:"username"`
-	FullName                       string `json:"fullName"`
-	Admin                          bool   `json:"admin"`
-	HomeDirectory                  string `json:"homeDirectory"`
-	HomeDirectorySizeMb            int    `json:"homeDirectorySizeMb"`
-	FileVault2Enabled              bool   `json:"fileVault2Enabled"`
-	UserAccountType                string `json:"userAccountType"`
-	PasswordMinLength              int    `json:"passwordMinLength"`
-	PasswordMaxAge                 int    `json:"passwordMaxAge"`
-	PasswordMinComplexCharacters   int    `json:"passwordMinComplexCharacters"`
-	PasswordHistoryDepth           int    `json:"passwordHistoryDepth"`
-	PasswordRequireAlphanumeric    bool   `json:"passwordRequireAlphanumeric"`
-	ComputerAzureActiveDirectoryId string `json:"computerAzureActiveDirectoryId"`
-	UserAzureActiveDirectoryId     string `json:"userAzureActiveDirectoryId"`
-	AzureActiveDirectoryId         string `json:"azureActiveDirectoryId"`
+	UID                            *string `json:"uid,omitempty"`
+	UserGuid                       *string `json:"userGuid,omitempty"`
+	Username                       *string `json:"username,omitempty"`
+	FullName                       *string `json:"fullName,omitempty"`
+	Admin                          *bool   `json:"admin,omitempty"`
+	HomeDirectory                  *string `json:"homeDirectory,omitempty"`
+	HomeDirectorySizeMb            *int    `json:"homeDirectorySizeMb,omitempty"`
+	FileVault2Enabled              *bool   `json:"fileVault2Enabled"`
+	UserAccountType                *string `json:"userAccountType,omitempty"`
+	PasswordMinLength              *int    `json:"passwordMinLength,omitempty"`
+	PasswordMaxAge                 *int    `json:"passwordMaxAge,omitempty"`
+	PasswordMinComplexCharacters   *int    `json:"passwordMinComplexCharacters,omitempty"`
+	PasswordHistoryDepth           *int    `json:"passwordHistoryDepth,omitempty"`
+	PasswordRequireAlphanumeric    *bool   `json:"passwordRequireAlphanumeric,omitempty"`
+	ComputerAzureActiveDirectoryId *string `json:"computerAzureActiveDirectoryId,omitempty"`
+	UserAzureActiveDirectoryId     *string `json:"userAzureActiveDirectoryId,omitempty"`
+	AzureActiveDirectoryId         *string `json:"azureActiveDirectoryId,omitempty"`
 }
 
 // Certificates
 
 type ComputerInventorySubsetCertificate struct {
-	CommonName        string `json:"commonName"`
-	Identity          bool   `json:"identity"`
-	ExpirationDate    string `json:"expirationDate"`
-	Username          string `json:"username"`
-	LifecycleStatus   string `json:"lifecycleStatus"`
-	CertificateStatus string `json:"certificateStatus"`
-	SubjectName       string `json:"subjectName"`
-	SerialNumber      string `json:"serialNumber"`
-	Sha1Fingerprint   string `json:"sha1Fingerprint"`
-	IssuedDate        string `json:"issuedDate"`
+	CommonName        *string `json:"commonName,omitempty"`
+	Identity          *bool   `json:"identity,omitempty"`
+	ExpirationDate    *string `json:"expirationDate,omitempty"`
+	Username          *string `json:"username,omitempty"`
+	LifecycleStatus   *string `json:"lifecycleStatus,omitempty"`
+	CertificateStatus *string `json:"certificateStatus,omitempty"`
+	SubjectName       *string `json:"subjectName,omitempty"`
+	SerialNumber      *string `json:"serialNumber,omitempty"`
+	Sha1Fingerprint   *string `json:"sha1Fingerprint"`
+	IssuedDate        *string `json:"issuedDate,omitempty"`
 }
 
 // Attachments
 
 type ComputerInventorySubsetAttachment struct {
-	ID        string `json:"id"`
-	Name      string `json:"name"`
-	FileType  string `json:"fileType"`
-	SizeBytes int    `json:"sizeBytes"`
+	ID        *string `json:"id,omitempty"`
+	Name      *string `json:"name,omitempty"`
+	FileType  *string `json:"fileType,omitempty"`
+	SizeBytes *int    `json:"sizeBytes,omitempty"`
 }
 
 // Plugins
 
 type ComputerInventorySubsetPlugin struct {
-	Name    string `json:"name"`
-	Version string `json:"version"`
-	Path    string `json:"path"`
+	Name    *string `json:"name,omitempty"`
+	Version *string `json:"version,omitempty"`
+	Path    *string `json:"path,omitempty"`
 }
 
 // Package Receipts
 
 type ComputerInventorySubsetPackageReceipts struct {
-	InstalledByJamfPro      []string `json:"installedByJamfPro"`
-	InstalledByInstallerSwu []string `json:"installedByInstallerSwu"`
-	Cached                  []string `json:"cached"`
+	InstalledByJamfPro      []*string `json:"installedByJamfPro,omitempty"`
+	InstalledByInstallerSwu []*string `json:"installedByInstallerSwu,omitempty"`
+	Cached                  []*string `json:"cached,omitempty"`
 }
 
 // Fonts
 
 type ComputerInventorySubsetFont struct {
-	Name    string `json:"name"`
-	Version string `json:"version"`
-	Path    string `json:"path"`
+	Name    *string `json:"name,omitempty"`
+	Version *string `json:"version,omitempty"`
+	Path    *string `json:"path,omitempty"`
 }
 
 // Security
 
 type ComputerInventorySubsetSecurity struct {
-	SipStatus                    string `json:"sipStatus"`
-	GatekeeperStatus             string `json:"gatekeeperStatus"`
-	XprotectVersion              string `json:"xprotectVersion"`
-	AutoLoginDisabled            bool   `json:"autoLoginDisabled"`
-	RemoteDesktopEnabled         bool   `json:"remoteDesktopEnabled"`
-	ActivationLockEnabled        bool   `json:"activationLockEnabled"`
-	RecoveryLockEnabled          bool   `json:"recoveryLockEnabled"`
-	FirewallEnabled              bool   `json:"firewallEnabled"`
-	SecureBootLevel              string `json:"secureBootLevel"`
-	ExternalBootLevel            string `json:"externalBootLevel"`
-	BootstrapTokenAllowed        bool   `json:"bootstrapTokenAllowed"`
-	BootstrapTokenEscrowedStatus string `json:"bootstrapTokenEscrowedStatus"`
-	LastAttestationAttempt       string `json:"lastAttestationAttempt"`
-	LastSuccessfulAttestation    string `json:"lastSuccessfulAttestation"`
-	AttestationStatus            string `json:"attestationStatus"`
+	SipStatus                    *string `json:"sipStatus,omitempty"`
+	GatekeeperStatus             *string `json:"gatekeeperStatus,omitempty"`
+	XprotectVersion              *string `json:"xprotectVersion,omitempty"`
+	AutoLoginDisabled            *bool   `json:"autoLoginDisabled,omitempty"`
+	RemoteDesktopEnabled         *bool   `json:"remoteDesktopEnabled,omitempty"`
+	ActivationLockEnabled        *bool   `json:"activationLockEnabled,omitempty"`
+	RecoveryLockEnabled          *bool   `json:"recoveryLockEnabled,omitempty"`
+	FirewallEnabled              *bool   `json:"firewallEnabled,omitempty"`
+	SecureBootLevel              *string `json:"secureBootLevel,omitempty"`
+	ExternalBootLevel            *string `json:"externalBootLevel,omitempty"`
+	BootstrapTokenAllowed        *bool   `json:"bootstrapTokenAllowed,omitempty"`
+	BootstrapTokenEscrowedStatus *string `json:"bootstrapTokenEscrowedStatus,omitempty"`
+	LastAttestationAttempt       *string `json:"lastAttestationAttempt,omitempty"`
+	LastSuccessfulAttestation    *string `json:"lastSuccessfulAttestation,omitempty"`
+	AttestationStatus            *string `json:"attestationStatus,omitempty"`
 }
 
 // Operating System
 
 type ComputerInventorySubsetOperatingSystem struct {
-	Name                     string                                      `json:"name"`
-	Version                  string                                      `json:"version"`
-	Build                    string                                      `json:"build"`
-	SupplementalBuildVersion string                                      `json:"supplementalBuildVersion"`
-	RapidSecurityResponse    string                                      `json:"rapidSecurityResponse"`
-	ActiveDirectoryStatus    string                                      `json:"activeDirectoryStatus"`
-	FileVault2Status         string                                      `json:"fileVault2Status"`
-	SoftwareUpdateDeviceId   string                                      `json:"softwareUpdateDeviceId"`
-	ExtensionAttributes      []ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes"`
+	Name                     *string                                      `json:"name,omitempty"`
+	Version                  *string                                      `json:"version,omitempty"`
+	Build                    *string                                      `json:"build,omitempty"`
+	SupplementalBuildVersion *string                                      `json:"supplementalBuildVersion,omitempty"`
+	RapidSecurityResponse    *string                                      `json:"rapidSecurityResponse,omitempty"`
+	ActiveDirectoryStatus    *string                                      `json:"activeDirectoryStatus,omitempty"`
+	FileVault2Status         *string                                      `json:"fileVault2Status"`
+	SoftwareUpdateDeviceId   *string                                      `json:"softwareUpdateDeviceId,omitempty"`
+	ExtensionAttributes      []*ComputerInventorySubsetExtensionAttribute `json:"extensionAttributes,omitempty"`
 }
 
 // Licensed Software
 
 type ComputerInventorySubsetLicensedSoftware struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+	ID   *string `json:"id,omitempty"`
+	Name *string `json:"name,omitempty"`
 }
 
 // IBeacon
 
 type ComputerInventorySubsetIBeacon struct {
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 }
 
 // Software Updates
 
 type ComputerInventorySubsetSoftwareUpdate struct {
-	Name        string `json:"name"`
-	Version     string `json:"version"`
-	PackageName string `json:"packageName"`
+	Name        *string `json:"name,omitempty"`
+	Version     *string `json:"version,omitempty"`
+	PackageName *string `json:"packageName,omitempty"`
 }
 
 // Content Caching
 
 type ComputerInventorySubsetContentCaching struct {
-	ComputerContentCachingInformationId string                                                  `json:"computerContentCachingInformationId"`
-	Parents                             []ComputerInventorySubsetContentCachingParent           `json:"parents"`
-	Alerts                              []ComputerInventorySubsetContentCachingAlert            `json:"alerts"` // Corrected to slice
-	Activated                           bool                                                    `json:"activated"`
-	Active                              bool                                                    `json:"active"`
-	ActualCacheBytesUsed                int                                                     `json:"actualCacheBytesUsed"`
-	CacheDetails                        []ComputerInventorySubsetContentCachingCacheDetail      `json:"cacheDetails"`
-	CacheBytesFree                      int                                                     `json:"cacheBytesFree"`
-	CacheBytesLimit                     int                                                     `json:"cacheBytesLimit"`
-	CacheStatus                         string                                                  `json:"cacheStatus"`
-	CacheBytesUsed                      int                                                     `json:"cacheBytesUsed"`
-	DataMigrationCompleted              bool                                                    `json:"dataMigrationCompleted"`
-	DataMigrationProgressPercentage     int                                                     `json:"dataMigrationProgressPercentage"`
-	DataMigrationError                  ComputerInventorySubsetContentCachingDataMigrationError `json:"dataMigrationError"`
-	MaxCachePressureLast1HourPercentage int                                                     `json:"maxCachePressureLast1HourPercentage"`
-	PersonalCacheBytesFree              int                                                     `json:"personalCacheBytesFree"`
-	PersonalCacheBytesLimit             int                                                     `json:"personalCacheBytesLimit"`
-	PersonalCacheBytesUsed              int                                                     `json:"personalCacheBytesUsed"`
-	Port                                int                                                     `json:"port"`
-	PublicAddress                       string                                                  `json:"publicAddress"`
-	RegistrationError                   string                                                  `json:"registrationError"`
-	RegistrationResponseCode            int                                                     `json:"registrationResponseCode"`
-	RegistrationStarted                 string                                                  `json:"registrationStarted"`
-	RegistrationStatus                  string                                                  `json:"registrationStatus"`
-	RestrictedMedia                     bool                                                    `json:"restrictedMedia"`
-	ServerGuid                          string                                                  `json:"serverGuid"`
-	StartupStatus                       string                                                  `json:"startupStatus"`
-	TetheratorStatus                    string                                                  `json:"tetheratorStatus"`
-	TotalBytesAreSince                  string                                                  `json:"totalBytesAreSince"`
-	TotalBytesDropped                   int64                                                   `json:"totalBytesDropped"`
-	TotalBytesImported                  int64                                                   `json:"totalBytesImported"`
-	TotalBytesReturnedToChildren        int64                                                   `json:"totalBytesReturnedToChildren"`
-	TotalBytesReturnedToClients         int64                                                   `json:"totalBytesReturnedToClients"`
-	TotalBytesReturnedToPeers           int64                                                   `json:"totalBytesReturnedToPeers"`
-	TotalBytesStoredFromOrigin          int64                                                   `json:"totalBytesStoredFromOrigin"`
-	TotalBytesStoredFromParents         int64                                                   `json:"totalBytesStoredFromParents"`
-	TotalBytesStoredFromPeers           int64                                                   `json:"totalBytesStoredFromPeers"`
+	ComputerContentCachingInformationId *string                                                  `json:"computerContentCachingInformationId,omitempty"`
+	Parents                             []*ComputerInventorySubsetContentCachingParent           `json:"parents,omitempty"`
+	Alerts                              []*ComputerInventorySubsetContentCachingAlert            `json:"alerts,omitempty"` // Corrected to slice
+	Activated                           *bool                                                    `json:"activated,omitempty"`
+	Active                              *bool                                                    `json:"active,omitempty"`
+	ActualCacheBytesUsed                *int                                                     `json:"actualCacheBytesUsed,omitempty"`
+	CacheDetails                        []*ComputerInventorySubsetContentCachingCacheDetail      `json:"cacheDetails,omitempty"`
+	CacheBytesFree                      *int                                                     `json:"cacheBytesFree,omitempty"`
+	CacheBytesLimit                     *int                                                     `json:"cacheBytesLimit,omitempty"`
+	CacheStatus                         *string                                                  `json:"cacheStatus,omitempty"`
+	CacheBytesUsed                      *int                                                     `json:"cacheBytesUsed,omitempty"`
+	DataMigrationCompleted              *bool                                                    `json:"dataMigrationCompleted,omitempty"`
+	DataMigrationProgressPercentage     *int                                                     `json:"dataMigrationProgressPercentage,omitempty"`
+	DataMigrationError                  *ComputerInventorySubsetContentCachingDataMigrationError `json:"dataMigrationError,omitempty"`
+	MaxCachePressureLast1HourPercentage *int                                                     `json:"maxCachePressureLast1HourPercentage"`
+	PersonalCacheBytesFree              *int                                                     `json:"personalCacheBytesFree,omitempty"`
+	PersonalCacheBytesLimit             *int                                                     `json:"personalCacheBytesLimit,omitempty"`
+	PersonalCacheBytesUsed              *int                                                     `json:"personalCacheBytesUsed,omitempty"`
+	Port                                *int                                                     `json:"port,omitempty"`
+	PublicAddress                       *string                                                  `json:"publicAddress,omitempty"`
+	RegistrationError                   *string                                                  `json:"registrationError,omitempty"`
+	RegistrationResponseCode            *int                                                     `json:"registrationResponseCode,omitempty"`
+	RegistrationStarted                 *string                                                  `json:"registrationStarted,omitempty"`
+	RegistrationStatus                  *string                                                  `json:"registrationStatus,omitempty"`
+	RestrictedMedia                     *bool                                                    `json:"restrictedMedia,omitempty"`
+	ServerGuid                          *string                                                  `json:"serverGuid,omitempty"`
+	StartupStatus                       *string                                                  `json:"startupStatus,omitempty"`
+	TetheratorStatus                    *string                                                  `json:"tetheratorStatus,omitempty"`
+	TotalBytesAreSince                  *string                                                  `json:"totalBytesAreSince,omitempty"`
+	TotalBytesDropped                   *int64                                                   `json:"totalBytesDropped,omitempty"`
+	TotalBytesImported                  *int64                                                   `json:"totalBytesImported,omitempty"`
+	TotalBytesReturnedToChildren        *int64                                                   `json:"totalBytesReturnedToChildren,omitempty"`
+	TotalBytesReturnedToClients         *int64                                                   `json:"totalBytesReturnedToClients,omitempty"`
+	TotalBytesReturnedToPeers           *int64                                                   `json:"totalBytesReturnedToPeers,omitempty"`
+	TotalBytesStoredFromOrigin          *int64                                                   `json:"totalBytesStoredFromOrigin,omitempty"`
+	TotalBytesStoredFromParents         *int64                                                   `json:"totalBytesStoredFromParents,omitempty"`
+	TotalBytesStoredFromPeers           *int64                                                   `json:"totalBytesStoredFromPeers,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingParent struct {
-	ContentCachingParentId string                                             `json:"contentCachingParentId"`
-	Address                string                                             `json:"address"`
-	Alerts                 ComputerInventorySubsetContentCachingAlert         `json:"alerts"` // Changed from slice to struct
-	Details                ComputerInventorySubsetContentCachingParentDetails `json:"details"`
-	Guid                   string                                             `json:"guid"`
-	Healthy                bool                                               `json:"healthy"`
-	Port                   int                                                `json:"port"`
-	Version                string                                             `json:"version"`
+	ContentCachingParentId *string                                             `json:"contentCachingParentId,omitempty"`
+	Address                *string                                             `json:"address,omitempty"`
+	Alerts                 *ComputerInventorySubsetContentCachingAlert         `json:"alerts,omitempty"` // Changed from slice to struct
+	Details                *ComputerInventorySubsetContentCachingParentDetails `json:"details,omitempty"`
+	Guid                   *string                                             `json:"guid,omitempty"`
+	Healthy                *bool                                               `json:"healthy,omitempty"`
+	Port                   *int                                                `json:"port,omitempty"`
+	Version                *string                                             `json:"version,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingParentDetails struct {
-	ContentCachingParentDetailsId string                                                           `json:"contentCachingParentDetailsId"`
-	AcPower                       bool                                                             `json:"acPower"`
-	CacheSizeBytes                int64                                                            `json:"cacheSizeBytes"`
-	Capabilities                  ComputerInventorySubsetContentCachingParentDetailsCapabilities   `json:"capabilities"`
-	Portable                      bool                                                             `json:"portable"`
-	LocalNetwork                  []ComputerInventorySubsetContentCachingParentDetailsLocalNetwork `json:"localNetwork"`
+	ContentCachingParentDetailsId *string                                                           `json:"contentCachingParentDetailsId,omitempty"`
+	AcPower                       *bool                                                             `json:"acPower,omitempty"`
+	CacheSizeBytes                *int64                                                            `json:"cacheSizeBytes,omitempty"`
+	Capabilities                  *ComputerInventorySubsetContentCachingParentDetailsCapabilities   `json:"capabilities,omitempty"`
+	Portable                      *bool                                                             `json:"portable,omitempty"`
+	LocalNetwork                  []*ComputerInventorySubsetContentCachingParentDetailsLocalNetwork `json:"localNetwork,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingParentDetailsCapabilities struct {
-	ContentCachingParentCapabilitiesId string `json:"contentCachingParentCapabilitiesId"`
-	Imports                            bool   `json:"imports"`
-	Namespaces                         bool   `json:"namespaces"`
-	PersonalContent                    bool   `json:"personalContent"`
-	QueryParameters                    bool   `json:"queryParameters"`
-	SharedContent                      bool   `json:"sharedContent"`
-	Prioritization                     bool   `json:"prioritization"`
+	ContentCachingParentCapabilitiesId *string `json:"contentCachingParentCapabilitiesId,omitempty"`
+	Imports                            *bool   `json:"imports,omitempty"`
+	Namespaces                         *bool   `json:"namespaces,omitempty"`
+	PersonalContent                    *bool   `json:"personalContent,omitempty"`
+	QueryParameters                    *bool   `json:"queryParameters,omitempty"`
+	SharedContent                      *bool   `json:"sharedContent,omitempty"`
+	Prioritization                     *bool   `json:"prioritization,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingParentDetailsLocalNetwork struct {
-	ContentCachingParentLocalNetworkId string `json:"contentCachingParentLocalNetworkId"`
-	Speed                              int    `json:"speed"`
-	Wired                              bool   `json:"wired"`
+	ContentCachingParentLocalNetworkId *string `json:"contentCachingParentLocalNetworkId,omitempty"`
+	Speed                              *int    `json:"speed,omitempty"`
+	Wired                              *bool   `json:"wired,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingCacheDetail struct {
-	ComputerContentCachingCacheDetailsId string `json:"computerContentCachingCacheDetailsId"`
-	CategoryName                         string `json:"categoryName"`
-	DiskSpaceBytesUsed                   int64  `json:"diskSpaceBytesUsed"`
+	ComputerContentCachingCacheDetailsId *string `json:"computerContentCachingCacheDetailsId,omitempty"`
+	CategoryName                         *string `json:"categoryName,omitempty"`
+	DiskSpaceBytesUsed                   *int64  `json:"diskSpaceBytesUsed,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingDataMigrationError struct {
-	Code     int                                                               `json:"code"`
-	Domain   string                                                            `json:"domain"`
-	UserInfo []ComputerInventorySubsetContentCachingDataMigrationErrorUserInfo `json:"userInfo"`
+	Code     *int                                                               `json:"code,omitempty"`
+	Domain   *string                                                            `json:"domain,omitempty"`
+	UserInfo []*ComputerInventorySubsetContentCachingDataMigrationErrorUserInfo `json:"userInfo,omitempty"`
 }
 
 type ComputerInventorySubsetContentCachingDataMigrationErrorUserInfo struct {
-	Key   string `json:"key"`
-	Value string `json:"value"`
+	Key   *string `json:"key,omitempty"`
+	Value *string `json:"value,omitempty"`
 }
 
 // Group Memberships
 
 type ComputerInventorySubsetGroupMembership struct {
-	GroupId          string `json:"groupId"`
-	GroupName        string `json:"groupName"`
-	GroupDescription string `json:"groupDescription"`
-	SmartGroup       bool   `json:"smartGroup"`
+	GroupId          *string `json:"groupId,omitempty"`
+	GroupName        *string `json:"groupName,omitempty"`
+	GroupDescription *string `json:"groupDescription,omitempty"`
+	SmartGroup       *bool   `json:"smartGroup,omitempty"`
 }
 
 // Shared
 
 // ExtensionAttribute represents a generic extension attribute.
 type ComputerInventorySubsetExtensionAttribute struct {
-	DefinitionId string   `json:"definitionId"`
-	Name         string   `json:"name"`
-	Description  string   `json:"description"`
-	Enabled      bool     `json:"enabled"`
-	MultiValue   bool     `json:"multiValue"`
-	Values       []string `json:"values"`
-	DataType     string   `json:"dataType"`
-	Options      []string `json:"options"`
-	InputType    string   `json:"inputType"`
+	DefinitionId *string   `json:"definitionId,omitempty"`
+	Name         *string   `json:"name,omitempty"`
+	Description  *string   `json:"description,omitempty"`
+	Enabled      *bool     `json:"enabled,omitempty"`
+	MultiValue   *bool     `json:"multiValue,omitempty"`
+	Values       []*string `json:"values,omitempty"`
+	DataType     *string   `json:"dataType,omitempty"`
+	Options      []*string `json:"options,omitempty"`
+	InputType    *string   `json:"inputType,omitempty"`
 }
 
 // BootPartitionEncryptionDetails represents the details of disk encryption.
 type ComputerInventorySubsetBootPartitionEncryptionDetails struct {
-	PartitionName              string `json:"partitionName"`
-	PartitionFileVault2State   string `json:"partitionFileVault2State"`
-	PartitionFileVault2Percent int    `json:"partitionFileVault2Percent"`
+	PartitionName              *string `json:"partitionName,omitempty"`
+	PartitionFileVault2State   *string `json:"partitionFileVault2State"`
+	PartitionFileVault2Percent *int    `json:"partitionFileVault2Percent"`
 }
 
 // ContentCachingAlert represents an alert in the content caching details.
 type ComputerInventorySubsetContentCachingAlert struct {
-	ContentCachingParentAlertId string   `json:"contentCachingParentAlertId"`
-	Addresses                   []string `json:"addresses"`
-	ClassName                   string   `json:"className"`
-	PostDate                    string   `json:"postDate"`
-	CacheBytesLimit             int      `json:"cacheBytesLimit"`
-	PathPreventingAccess        string   `json:"pathPreventingAccess"`
-	ReservedVolumeBytes         int      `json:"reservedVolumeBytes"`
-	Resource                    string   `json:"resource"`
+	ContentCachingParentAlertId *string   `json:"contentCachingParentAlertId,omitempty"`
+	Addresses                   []*string `json:"addresses,omitempty"`
+	ClassName                   *string   `json:"className,omitempty"`
+	PostDate                    *string   `json:"postDate,omitempty"`
+	CacheBytesLimit             *int      `json:"cacheBytesLimit,omitempty"`
+	PathPreventingAccess        *string   `json:"pathPreventingAccess,omitempty"`
+	ReservedVolumeBytes         *int      `json:"reservedVolumeBytes,omitempty"`
+	Resource                    *string   `json:"resource,omitempty"`
 }
 
 // FileVaultInventoryList represents the paginated FileVault inventory response.
@@ -536,30 +538,30 @@ type FileVaultInventoryList struct {
 
 // FileVaultInventory represents the FileVault information for a single computer.
 type FileVaultInventory struct {
-	ComputerId                          string                                                `json:"computerId"`
-	Name                                string                                                `json:"name"`
-	PersonalRecoveryKey                 string                                                `json:"personalRecoveryKey"`
-	BootPartitionEncryptionDetails      ComputerInventorySubsetBootPartitionEncryptionDetails `json:"bootPartitionEncryptionDetails"`
-	IndividualRecoveryKeyValidityStatus string                                                `json:"individualRecoveryKeyValidityStatus"`
-	InstitutionalRecoveryKeyPresent     bool                                                  `json:"institutionalRecoveryKeyPresent"`
-	DiskEncryptionConfigurationName     string                                                `json:"diskEncryptionConfigurationName"`
+	ComputerId                          *string                                                `json:"computerId,omitempty"`
+	Name                                *string                                                `json:"name,omitempty"`
+	PersonalRecoveryKey                 *string                                                `json:"personalRecoveryKey,omitempty"`
+	BootPartitionEncryptionDetails      *ComputerInventorySubsetBootPartitionEncryptionDetails `json:"bootPartitionEncryptionDetails,omitempty"`
+	IndividualRecoveryKeyValidityStatus *string                                                `json:"individualRecoveryKeyValidityStatus,omitempty"`
+	InstitutionalRecoveryKeyPresent     *bool                                                  `json:"institutionalRecoveryKeyPresent,omitempty"`
+	DiskEncryptionConfigurationName     *string                                                `json:"diskEncryptionConfigurationName,omitempty"`
 }
 
 // ResponseRecoveryLockPassword represents the response structure for a recovery lock password.
 type ResponseRecoveryLockPassword struct {
-	RecoveryLockPassword string `json:"recoveryLockPassword"`
+	RecoveryLockPassword string `json:"recoveryLockPassword,omitempty"`
 }
 
 // ResponseUploadAttachment represents the response structure for uploading an attachment.
 type ResponseUploadAttachment struct {
-	ID   string `json:"id"`
-	Href string `json:"href"`
+	ID   string `json:"id,omitempty"`
+	Href string `json:"href,omitempty"`
 }
 
 // ResponseRemoveMDMProfile represents the response structure for removing an MDM profile.
 type ResponseRemoveMDMProfile struct {
-	DeviceID    string `json:"deviceId"`
-	CommandUUID string `json:"commandUuid"`
+	DeviceID    string `json:"deviceId,omitempty"`
+	CommandUUID string `json:"commandUuid,omitempty"`
 }
 
 // Request
@@ -620,7 +622,7 @@ func (c *Client) GetComputerInventoryByName(name string) (*ResourceComputerInven
 	}
 
 	for _, inventory := range inventories.Results {
-		if inventory.General.Name == name {
+		if *inventory.General.Name == name {
 			return &inventory, nil
 		}
 	}

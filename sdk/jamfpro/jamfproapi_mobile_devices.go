@@ -27,273 +27,274 @@ type ResponseMobileDeviceInventoryList struct {
 }
 
 type ResourceMobileDeviceInventory struct {
-	ID                   string                                           `json:"mobileDeviceId"`
-	DeviceType           string                                           `json:"deviceType"`
-	Hardware             MobileDeviceInventorySubsetHardware              `json:"hardware"`
-	UserAndLocation      MobileDeviceInventorySubsetUserAndLocation       `json:"userAndLocation"`
-	Applications         []MobileDeviceInventorySubsetApplication         `json:"applications"`
-	Certificates         []MobileDeviceInventorySubsetCertificate         `json:"certificates"`
-	Profiles             []MobileDeviceInventorySubsetProfile             `json:"profiles"`
-	Groups               []MobileDeviceInventorySubsetGroup               `json:"groups"`
-	ExtensionAttributes  []MobileDeviceInventorySubsetExtensionAttribute  `json:"extensionAttributes"`
-	General              MobileDeviceInventorySubsetGeneral               `json:"general"`
-	Security             MobileDeviceInventorySubsetSecurity              `json:"security"`
-	EBooks               []MobileDeviceInventorySubsetEBook               `json:"ebooks"`
-	Network              MobileDeviceInventorySubsetNetwork               `json:"network"`
-	ServiceSubscriptions []MobileDeviceInventorySubsetServiceSubscription `json:"serviceSubscriptions"`
-	ProvisioningProfiles []MobileDeviceInventorySubsetProvisioningProfile `json:"provisioningProfiles"`
-	SharedUsers          []MobileDeviceInventorySubsetSharedUser          `json:"sharedUsers"`
-	Purchasing           MobileDeviceInventorySubsetPurchashing           `json:"purchasing"`
-	UserProfiles         []MobileDeviceInventorySubsetUserProfile         `json:"userProfiles"`
+	ID                   *string                                           `json:"mobileDeviceId,omitempty"`
+	DeviceType           *string                                           `json:"deviceType,omitempty"`
+	Hardware             *MobileDeviceInventorySubsetHardware              `json:"hardware,omitempty"`
+	UserAndLocation      *MobileDeviceInventorySubsetUserAndLocation       `json:"userAndLocation,omitempty"`
+	Applications         []*MobileDeviceInventorySubsetApplication         `json:"applications,omitempty"`
+	Certificates         []*MobileDeviceInventorySubsetCertificate         `json:"certificates,omitempty"`
+	Profiles             []*MobileDeviceInventorySubsetProfile             `json:"profiles,omitempty"`
+	Groups               []*MobileDeviceInventorySubsetGroup               `json:"groups,omitempty"`
+	ExtensionAttributes  []*MobileDeviceInventorySubsetExtensionAttribute  `json:"extensionAttributes,omitempty"`
+	General              *MobileDeviceInventorySubsetGeneral               `json:"general,omitempty"`
+	Security             *MobileDeviceInventorySubsetSecurity              `json:"security,omitempty"`
+	EBooks               []*MobileDeviceInventorySubsetEBook               `json:"ebooks,omitempty"`
+	Network              *MobileDeviceInventorySubsetNetwork               `json:"network,omitempty"`
+	ServiceSubscriptions []*MobileDeviceInventorySubsetServiceSubscription `json:"serviceSubscriptions,omitempty"`
+	ProvisioningProfiles []*MobileDeviceInventorySubsetProvisioningProfile `json:"provisioningProfiles,omitempty"`
+	SharedUsers          []*MobileDeviceInventorySubsetSharedUser          `json:"sharedUsers,omitempty"`
+	Purchasing           *MobileDeviceInventorySubsetPurchashing           `json:"purchasing,omitempty"`
+	UserProfiles         []*MobileDeviceInventorySubsetUserProfile         `json:"userProfiles,omitempty"`
 }
 
 type MobileDeviceInventorySubsetHardware struct {
-	CapacityMB                int    `json:"capacityMB"`
-	AvailableSpaceMB          int    `json:"availableSpaceMB"`
-	UsedSpacePercentage       int    `json:"usedSpacePercentage"`
-	BatteryLevel              int    `json:"batteryLevel"`
-	BatteryHealth             string `json:"batteryHealth"`
-	SerialNumber              string `json:"serialNumber"`
-	WifiMacAddress            string `json:wifiMacAddress"`
-	BluetoothMacAddress       string `json:"bluetoothMacAddress"`
-	ModemFirmwareVersion      string `json:"modemFirmwareVersion"`
-	Model                     string `json:"model"`
-	ModelIdentifier           string `json:"modelIdentifier"`
-	ModelNumber               string `json:"modelNumber"`
-	BluetoothLowEnergyCapable bool   `json:"bluetoothLowEnergyCapable"`
-	DeviceID                  string `json:"deviceId"`
-	ExtensionAttributes       []MobileDeviceInventorySubsetExtensionAttribute
+	CapacityMB                *int    `json:"capacityMB,omitempty"`
+	AvailableSpaceMB          *int    `json:"availableSpaceMB,omitempty"`
+	UsedSpacePercentage       *int    `json:"usedSpacePercentage,omitempty"`
+	BatteryLevel              *int    `json:"batteryLevel,omitempty"`
+	BatteryHealth             *string `json:"batteryHealth,omitempty"`
+	SerialNumber              *string `json:"serialNumber,omitempty"`
+	WifiMacAddress            *string `json:"wifiMacAddress,omitempty"`
+	BluetoothMacAddress       *string `json:"bluetoothMacAddress,omitempty"`
+	ModemFirmwareVersion      *string `json:"modemFirmwareVersion,omitempty"`
+	Model                     *string `json:"model,omitempty"`
+	ModelIdentifier           *string `json:"modelIdentifier,omitempty"`
+	ModelNumber               *string `json:"modelNumber,omitempty"`
+	BluetoothLowEnergyCapable *bool   `json:"bluetoothLowEnergyCapable,omitempty"`
+	DeviceID                  *string `json:"deviceId,omitempty"`
+	ExtensionAttributes       []*MobileDeviceInventorySubsetExtensionAttribute
 }
 
 type MobileDeviceInventorySubsetUserAndLocation struct {
-	Username            string `json:"username"`
-	RealName            string `json:"realName"`
-	EmailAddress        string `json:"emailAddress"`
-	Position            string `json:"position"`
-	PhoneNumber         string `json:"phoneNumber"`
-	DepartmentID        string `json:"departmentID"`
-	BuildingID          string `json:"buildingID"`
-	Room                string `json:"room"`
-	Building            string `json:"building"`
-	Department          string `json:"department"`
-	ExtensionAttributes []MobileDeviceInventorySubsetExtensionAttribute
+	Username            *string `json:"username,omitempty"`
+	RealName            *string `json:"realName,omitempty"`
+	EmailAddress        *string `json:"emailAddress,omitempty"`
+	Position            *string `json:"position,omitempty"`
+	PhoneNumber         *string `json:"phoneNumber,omitempty"`
+	DepartmentID        *string `json:"departmentID,omitempty"`
+	BuildingID          *string `json:"buildingID,omitempty"`
+	Room                *string `json:"room,omitempty"`
+	Building            *string `json:"building,omitempty"`
+	Department          *string `json:"department,omitempty"`
+	ExtensionAttributes []*MobileDeviceInventorySubsetExtensionAttribute
 }
 
 type MobileDeviceInventorySubsetApplication struct {
-	Identifier       string `json:"identifier"`
-	Name             string `json:"name"`
-	Version          string `json:"version"`
-	ShortVersion     string `json:"shortVersion"`
-	ManagementStatus string `json:"managementStatus"`
-	ValidationStatus bool   `json:"validationStatus"`
-	BundleSize       string `json:"bundleSize"`
-	DynamicSize      string `json:"dynamicSize"`
+	Identifier       *string `json:"identifier,omitempty"`
+	Name             *string `json:"name,omitempty"`
+	Version          *string `json:"version,omitempty"`
+	ShortVersion     *string `json:"shortVersion,omitempty"`
+	ManagementStatus *string `json:"managementStatus,omitempty"`
+	ValidationStatus *bool   `json:"validationStatus,omitempty"`
+	BundleSize       *string `json:"bundleSize,omitempty"`
+	DynamicSize      *string `json:"dynamicSize,omitempty"`
 }
 
 type MobileDeviceInventorySubsetCertificate struct {
-	CommonName     string `json:"commonName"`
-	Identity       bool   `json:"identity"`
-	ExpirationDate string `json:"expirationDate"`
+	CommonName     *string `json:"commonName,omitempty"`
+	Identity       *bool   `json:"identity,omitempty"`
+	ExpirationDate *string `json:"expirationDate,omitempty"`
 }
 
 type MobileDeviceInventorySubsetProfile struct {
-	DisplayName   string `json:"displayName"`
-	Version       string `json:"version"`
-	UUID          string `json:"uuid"`
-	Identifier    string `json:"identifier"`
-	Removable     bool   `json:"removable"`
-	LastInstalled string `json:"lastInstalled"`
+	DisplayName   *string `json:"displayName,omitempty"`
+	Version       *string `json:"version,omitempty"`
+	UUID          *string `json:"uuid,omitempty"`
+	Identifier    *string `json:"identifier,omitempty"`
+	Removable     *bool   `json:"removable,omitempty"`
+	LastInstalled *string `json:"lastInstalled,omitempty"`
 }
 
 type MobileDeviceInventorySubsetGroup struct {
-	GroupID          string `json:"groupId"`
-	GroupName        string `json:"groupName"`
-	GroupDescription string `json:"groupDescription"`
-	Smart            bool   `json:"smart"`
+	GroupID          *string `json:"groupId,omitempty"`
+	GroupName        *string `json:"groupName,omitempty"`
+	GroupDescription *string `json:"groupDescription,omitempty"`
+	Smart            *bool   `json:"smart,omitempty"`
 }
 
 type MobileDeviceInventorySubsetExtensionAttribute struct {
-	ID                                  string   `json:"id"`
-	Name                                string   `json:"name"`
-	Type                                string   `json:"type"`
-	Value                               []string `json:"value"`
-	ExtensionAttributeCollectionAllowed bool     `json:"extensionAttributeCollectionAllowed"`
-	InventoryDisplay                    string   `json:"inventoryDisplay"`
+	ID                                  *string   `json:"id,omitempty"`
+	Name                                *string   `json:"name,omitempty"`
+	Type                                *string   `json:"type,omitempty"`
+	Value                               []*string `json:"value,omitempty"`
+	ExtensionAttributeCollectionAllowed *bool     `json:"extensionAttributeCollectionAllowed,omitempty"`
+	InventoryDisplay                    *string   `json:"inventoryDisplay,omitempty"`
 }
 
 type MobileDeviceInventorySubsetGeneral struct {
-	UDID                                        string                                             `json:"udid"`
-	DisplayName                                 string                                             `json:"displayName"`
-	AssetTag                                    string                                             `json:"assetTag"`
-	SiteID                                      string                                             `json:"siteId"`
-	LastInventoryUpdateDate                     string                                             `json:"lastInventoryUpdateDate"`
-	OSVersion                                   string                                             `json:"osVersion"`
-	OSRapidSecurityResponse                     string                                             `json:"osRapidSecurityResponse"`
-	OSBuild                                     string                                             `json:"osBuild"`
-	OSSupplementalBuildVersion                  string                                             `json:"osSupplementalBuildVersion"`
-	SoftwareUpdateDeviceID                      string                                             `json:"softwareUpdateDeviceId"`
-	IPAddress                                   string                                             `json:"ipAddress"`
-	Managed                                     bool                                               `json:"managed"`
-	Supervised                                  bool                                               `json:"supervised"`
-	DeviceOwnershipType                         string                                             `json:"deviceOwnershipType"`
-	EnrollmentMethodPrestage                    MobileDeviceInventorySubsetGeneralEnrollmentMethod `json:"enrollmentMethodPrestage"`
-	EnrollmentSessionTokenValid                 bool                                               `json:"enrollmentSessionTokenValid"`
-	LastEnrolledDate                            string                                             `json:"lastEnrolledDate"`
-	MDMProfileExpirationDate                    string                                             `json:"mdmProfileExpirationDate"`
-	TimeZone                                    string                                             `json:"timeZone"`
-	DeclarativeDeviceManagementEnabled          bool                                               `json:"declarativeDeviceManagementEnabled"`
-	ManagementID                                string                                             `json:"managementId"`
-	ExtensionAttributes                         []MobileDeviceInventorySubsetExtensionAttribute    `json:"extensionAttributes"`
-	LastLoggedInUsernameSelfService             string                                             `json:"lastLoggedInUsernameSelfService"`
-	LastLoggedInUsernameSelfServiceTimestamp    string                                             `json:"lastLoggedInUsernameSelfServiceTimestamp"`
-	SharediPad                                  bool                                               `json:"sharedIpad"`
-	DiagnosticAndUsageReportingEnabled          bool                                               `json:"diagnosticAndUsageReportingEnabled"`
-	AppAnalyticsEnabled                         bool                                               `json:"appAnalyticsEnabled"`
-	ResidentUsers                               int                                                `json:"residentUsers"`
-	QuotaSize                                   int                                                `json:"quotaSize"`
-	TemporarySessionOnly                        bool                                               `json:"temporarySessionOnly"`
-	TemporarySessionTimeout                     int                                                `json:"temporarySessionTimeout"`
-	UserSessionTimeout                          int                                                `json:"userSessionTimeout"`
-	SyncedToComputer                            int                                                `json:"syncedToComputer"`
-	MaximumSharediPadUsersStored                int                                                `json:"maximumSharediPadUsersStored"`
-	LastBackupDate                              string                                             `json:"lastBackupDate"`
-	DeviceLocatorServiceEnabled                 bool                                               `json:"deviceLocatorServiceEnabled"`
-	DoNotDisturbEnabled                         bool                                               `json:"doNotDisturbEnabled"`
-	CloudBackupEnabled                          bool                                               `json:"cloudBackupEnabled"`
-	LastCloudBackupDate                         string                                             `json:"lastCloudBackupDate"`
-	LocationServicesForSelfServiceMobileEnabled bool                                               `json:"locationServicesForSelfServiceMobileEnabled"`
-	ITunesStoreAccountActive                    bool                                               `json:"itunesStoreAccountActive"`
-	ExchangeDeviceID                            string                                             `json:"exchangeDeviceId"`
-	Tethered                                    bool                                               `json:"tethered"`
+	UDID                                        *string                                             `json:"udid,omitempty"`
+	DisplayName                                 *string                                             `json:"displayName,omitempty"`
+	AssetTag                                    *string                                             `json:"assetTag,omitempty"`
+	SiteID                                      *string                                             `json:"siteId,omitempty"`
+	LastInventoryUpdateDate                     *string                                             `json:"lastInventoryUpdateDate,omitempty"`
+	OSVersion                                   *string                                             `json:"osVersion,omitempty"`
+	OSRapidSecurityResponse                     *string                                             `json:"osRapidSecurityResponse,omitempty"`
+	OSBuild                                     *string                                             `json:"osBuild,omitempty"`
+	OSSupplementalBuildVersion                  *string                                             `json:"osSupplementalBuildVersion,omitempty"`
+	SoftwareUpdateDeviceID                      *string                                             `json:"softwareUpdateDeviceId,omitempty"`
+	IPAddress                                   *string                                             `json:"ipAddress,omitempty"`
+	Managed                                     *bool                                               `json:"managed,omitempty"`
+	Supervised                                  *bool                                               `json:"supervised,omitempty"`
+	DeviceOwnershipType                         *string                                             `json:"deviceOwnershipType,omitempty"`
+	EnrollmentMethodPrestage                    *MobileDeviceInventorySubsetGeneralEnrollmentMethod `json:"enrollmentMethodPrestage,omitempty"`
+	EnrollmentSessionTokenValid                 *bool                                               `json:"enrollmentSessionTokenValid,omitempty"`
+	LastEnrolledDate                            *string                                             `json:"lastEnrolledDate,omitempty"`
+	MDMProfileExpirationDate                    *string                                             `json:"mdmProfileExpirationDate,omitempty"`
+	TimeZone                                    *string                                             `json:"timeZone,omitempty"`
+	DeclarativeDeviceManagementEnabled          *bool                                               `json:"declarativeDeviceManagementEnabled,omitempty"`
+	ManagementID                                *string                                             `json:"managementId,omitempty"`
+	ExtensionAttributes                         []*MobileDeviceInventorySubsetExtensionAttribute    `json:"extensionAttributes,omitempty"`
+	LastLoggedInUsernameSelfService             *string                                             `json:"lastLoggedInUsernameSelfService,omitempty"`
+	LastLoggedInUsernameSelfServiceTimestamp    *string                                             `json:"lastLoggedInUsernameSelfServiceTimestamp,omitempty"`
+	SharediPad                                  *bool                                               `json:"sharedIpad,omitempty"`
+	DiagnosticAndUsageReportingEnabled          *bool                                               `json:"diagnosticAndUsageReportingEnabled,omitempty"`
+	AppAnalyticsEnabled                         *bool                                               `json:"appAnalyticsEnabled,omitempty"`
+	ResidentUsers                               *int                                                `json:"residentUsers,omitempty"`
+	QuotaSize                                   *int                                                `json:"quotaSize,omitempty"`
+	TemporarySessionOnly                        *bool                                               `json:"temporarySessionOnly,omitempty"`
+	TemporarySessionTimeout                     *int                                                `json:"temporarySessionTimeout,omitempty"`
+	UserSessionTimeout                          *int                                                `json:"userSessionTimeout,omitempty"`
+	SyncedToComputer                            *int                                                `json:"syncedToComputer,omitempty"`
+	MaximumSharediPadUsersStored                *int                                                `json:"maximumSharediPadUsersStored,omitempty"`
+	LastBackupDate                              *string                                             `json:"lastBackupDate,omitempty"`
+	DeviceLocatorServiceEnabled                 *bool                                               `json:"deviceLocatorServiceEnabled,omitempty"`
+	DoNotDisturbEnabled                         *bool                                               `json:"doNotDisturbEnabled,omitempty"`
+	CloudBackupEnabled                          *bool                                               `json:"cloudBackupEnabled,omitempty"`
+	LastCloudBackupDate                         *string                                             `json:"lastCloudBackupDate,omitempty"`
+	LocationServicesForSelfServiceMobileEnabled *bool                                               `json:"locationServicesForSelfServiceMobileEnabled,omitempty"`
+	ITunesStoreAccountActive                    *bool                                               `json:"itunesStoreAccountActive,omitempty"`
+	ExchangeDeviceID                            *string                                             `json:"exchangeDeviceId,omitempty"`
+	Tethered                                    *bool                                               `json:"tethered,omitempty"`
 }
 
 type MobileDeviceInventorySubsetGeneralEnrollmentMethod struct {
-	MobileDevicePrestageID string `json:"mobileDevicePrestageId"`
-	ProfileName            string `json:"profileName"`
+	MobileDevicePrestageID *string `json:"mobileDevicePrestageId,omitempty"`
+	ProfileName            *string `json:"profileName,omitempty"`
 }
 
 type MobileDeviceInventorySubsetSecurity struct {
-	DataProtected                          bool                                        `json:"dataProtected"`
-	BlockLevelEncryptionCapable            bool                                        `json:"blockLevelEncryptionCapable"`
-	FileLevelEncryptionCapable             bool                                        `json:"fileLevelEncryptionCapable"`
-	PasscodePresent                        bool                                        `json:"passcodePresent"`
-	PasscodeCompliant                      bool                                        `json:"passcodeCompliant"`
-	PasscodeCompliantWithProfile           bool                                        `json:"passcodeCompliantWithProfile"`
-	HardwareEncryption                     int                                         `json:"hardwareEncryption"`
-	ActivationLockEnabled                  int                                         `json:"activationLockEnabled"`
-	JailBreakDetected                      int                                         `json:"jailBreakDetected"`
-	AttestationStatus                      string                                      `json:"attestationStatus"`
-	LastAttestationAttemptDate             string                                      `json:"lastAttestationAttemptDate"`
-	LastSuccessfulAttestationDate          string                                      `json:"lastSuccessfulAttestationDate"`
-	PasscodeLockGracePeriodEnforcedSeconds int                                         `json:"passcodeLockGracePeriodEnforcedSeconds"`
-	PersonalDeviceProfileCurrent           bool                                        `json:"personalDeviceProfileCurrent"`
-	LostModeEnabled                        bool                                        `json:"lostModeEnabled"`
-	LostModePersistent                     bool                                        `json:"lostModePersistent"`
-	LostModeMessage                        string                                      `json:"lostModeMessage"`
-	LostModePhoneNumber                    string                                      `json:"lostModePhoneNumber"`
-	LostModeFootnote                       string                                      `json:"lostModeFootnote"`
-	LostModeLocation                       MobileDeviceInventorySubsetSecurityLocation `json:"lostModeLocation"`
-	BootstraoTokenEscrowed                 string                                      `json:"bootstrapTokenEscrowed"`
+	DataProtected                          *bool                                        `json:"dataProtected,omitempty"`
+	BlockLevelEncryptionCapable            *bool                                        `json:"blockLevelEncryptionCapable,omitempty"`
+	FileLevelEncryptionCapable             *bool                                        `json:"fileLevelEncryptionCapable,omitempty"`
+	PasscodePresent                        *bool                                        `json:"passcodePresent,omitempty"`
+	PasscodeCompliant                      *bool                                        `json:"passcodeCompliant,omitempty"`
+	PasscodeCompliantWithProfile           *bool                                        `json:"passcodeCompliantWithProfile,omitempty"`
+	HardwareEncryption                     *int                                         `json:"hardwareEncryption,omitempty"`
+	ActivationLockEnabled                  *int                                         `json:"activationLockEnabled,omitempty"`
+	JailBreakDetected                      *int                                         `json:"jailBreakDetected,omitempty"`
+	AttestationStatus                      *string                                      `json:"attestationStatus,omitempty"`
+	LastAttestationAttemptDate             *string                                      `json:"lastAttestationAttemptDate,omitempty"`
+	LastSuccessfulAttestationDate          *string                                      `json:"lastSuccessfulAttestationDate,omitempty"`
+	PasscodeLockGracePeriodEnforcedSeconds *int                                         `json:"passcodeLockGracePeriodEnforcedSeconds,omitempty"`
+	PersonalDeviceProfileCurrent           *bool                                        `json:"personalDeviceProfileCurrent,omitempty"`
+	LostModeEnabled                        *bool                                        `json:"lostModeEnabled,omitempty"`
+	LostModePersistent                     *bool                                        `json:"lostModePersistent,omitempty"`
+	LostModeMessage                        *string                                      `json:"lostModeMessage,omitempty"`
+	LostModePhoneNumber                    *string                                      `json:"lostModePhoneNumber,omitempty"`
+	LostModeFootnote                       *string                                      `json:"lostModeFootnote,omitempty"`
+	LostModeLocation                       *MobileDeviceInventorySubsetSecurityLocation `json:"lostModeLocation,omitempty"`
+	BootstraoTokenEscrowed                 *string                                      `json:"bootstrapTokenEscrowed,omitempty"`
 }
 
 type MobileDeviceInventorySubsetSecurityLocation struct {
-	LastLocationUpdate                       string `json:"lastLocationUpdate"`
-	LostModeLocationHorizontalAccuracyMeters int    `json:"lostModeLocationHorizontalAccuracyMeters"`
-	LostModeLocationVerticalAccuracyMeters   int    `json:"lostModeLocationVerticalAccuracyMeters"`
-	LostModeLocationAltitudeMeters           int    `json:"lostModeLocationAltitudeMeters"`
-	LostModeLocationSpeedMetersPerSecond     int    `json:"lostModeLocationSpeedMetersPerSecond"`
-	LostModeLocationCourseDegrees            int    `json:"lostModeLocationCourseDegrees"`
-	LostModeLocationTimestamp                string `json:"lostModeLocationTimestamp"`
+	LastLocationUpdate                       *string `json:"lastLocationUpdate,omitempty"`
+	LostModeLocationHorizontalAccuracyMeters *int    `json:"lostModeLocationHorizontalAccuracyMeters,omitempty"`
+	LostModeLocationVerticalAccuracyMeters   *int    `json:"lostModeLocationVerticalAccuracyMeters,omitempty"`
+	LostModeLocationAltitudeMeters           *int    `json:"lostModeLocationAltitudeMeters,omitempty"`
+	LostModeLocationSpeedMetersPerSecond     *int    `json:"lostModeLocationSpeedMetersPerSecond,omitempty"`
+	LostModeLocationCourseDegrees            *int    `json:"lostModeLocationCourseDegrees,omitempty"`
+	LostModeLocationTimestamp                *string `json:"lostModeLocationTimestamp,omitempty"`
 }
 
 type MobileDeviceInventorySubsetEBook struct {
-	Author          string `json:"author"`
-	Title           string `json:"title"`
-	Version         string `json:"version"`
-	Kind            string `json:"kind"`
-	ManagementState string `json:"managementState"`
+	Author          *string `json:"author,omitempty"`
+	Title           *string `json:"title,omitempty"`
+	Version         *string `json:"version,omitempty"`
+	Kind            *string `json:"kind,omitempty"`
+	ManagementState *string `json:"managementState,omitempty"`
 }
 
 type MobileDeviceInventorySubsetNetwork struct {
-	CellularTechnology       string `json:"cellularTechnology"`
-	VoiceRoamingEnabled      bool   `json:"voiceRoamingEnabled"`
-	IMEI                     string `json:"imei"`
-	ICCID                    string `json:"iccid"`
-	MEID                     string `json:"meid"`
-	EID                      string `json:"eid"`
-	CarrierSettingsVersion   string `json:"carrierSettingsVersion"`
-	CurrentCarrierNetwork    string `json:"currentCarrierNetwork"`
-	CurrentMobileCountryCode string `json:"currentMobileCountryCode"`
-	CurrentMobileNetworkCode string `json:"currentMobileNetworkCode"`
-	HomeCarrierNetwork       string `json:"homeCarrierNetwork"`
-	HomeMobileCountryCode    string `json:"homeMobileCountryCode"`
-	HomeMobileNetworkCode    string `json:"homeMobileNetworkCode"`
-	DataRoamingEnabled       bool   `json:"dataRoamingEnabled"`
-	Roaming                  bool   `json:"roaming"`
-	PersonalHotspotEnabled   bool   `json:"personalHotspotEnabled"`
-	PhoneNumber              string `json:"phoneNumber"`
-	PreferredVoiceNumber     string `json:"preferredVoiceNumber"`
+	CellularTechnology       *string `json:"cellularTechnology,omitempty"`
+	VoiceRoamingEnabled      *bool   `json:"voiceRoamingEnabled,omitempty"`
+	IMEI                     *string `json:"imei,omitempty"`
+	ICCID                    *string `json:"iccid,omitempty"`
+	MEID                     *string `json:"meid,omitempty"`
+	EID                      *string `json:"eid,omitempty"`
+	CarrierSettingsVersion   *string `json:"carrierSettingsVersion,omitempty"`
+	CurrentCarrierNetwork    *string `json:"currentCarrierNetwork,omitempty"`
+	CurrentMobileCountryCode *string `json:"currentMobileCountryCode,omitempty"`
+	CurrentMobileNetworkCode *string `json:"currentMobileNetworkCode,omitempty"`
+	HomeCarrierNetwork       *string `json:"homeCarrierNetwork,omitempty"`
+	HomeMobileCountryCode    *string `json:"homeMobileCountryCode,omitempty"`
+	HomeMobileNetworkCode    *string `json:"homeMobileNetworkCode,omitempty"`
+	DataRoamingEnabled       *bool   `json:"dataRoamingEnabled,omitempty"`
+	Roaming                  *bool   `json:"roaming,omitempty"`
+	PersonalHotspotEnabled   *bool   `json:"personalHotspotEnabled,omitempty"`
+	PhoneNumber              *string `json:"phoneNumber,omitempty"`
+	PreferredVoiceNumber     *string `json:"preferredVoiceNumber,omitempty"`
 }
 
 type MobileDeviceInventorySubsetServiceSubscription struct {
-	CarrierSettingsVersion   string `json:"carrierSettingsVersion"`
-	CurrentCarrierNetwork    string `json:"currentCarrierNetwork"`
-	CurrentMobileCountryCode string `json:"currentMobileCountryCode"`
-	CurrentMobileNetworkCode string `json:"currentMobileNetworkCode"`
-	SubscriberCarrierNetwork string `json:"subscriberCarrierNetwork"`
-	EID                      string `json:"eid"`
-	ICCID                    string `json:"iccid"`
-	IMEI                     string `json:"imei"`
-	DataPreferred            bool   `json:"dataPreferred"`
-	Roaming                  bool   `json:"roaming"`
-	VoicePreferred           bool   `json:"voicePreferred"`
-	Label                    string `json:"label"`
-	LabelID                  string `json:"labelId"`
-	MEID                     string `json:"meid"`
-	PhoneNumber              string `json:"phoneNumber"`
-	Slot                     string `json:"slot"`
+	CarrierSettingsVersion   *string `json:"carrierSettingsVersion,omitempty"`
+	CurrentCarrierNetwork    *string `json:"currentCarrierNetwork,omitempty"`
+	CurrentMobileCountryCode *string `json:"currentMobileCountryCode,omitempty"`
+	CurrentMobileNetworkCode *string `json:"currentMobileNetworkCode,omitempty"`
+	SubscriberCarrierNetwork *string `json:"subscriberCarrierNetwork,omitempty"`
+	EID                      *string `json:"eid,omitempty"`
+	ICCID                    *string `json:"iccid,omitempty"`
+	IMEI                     *string `json:"imei,omitempty"`
+	DataPreferred            *bool   `json:"dataPreferred,omitempty"`
+	Roaming                  *bool   `json:"roaming,omitempty"`
+	VoicePreferred           *bool   `json:"voicePreferred,omitempty"`
+	Label                    *string `json:"label,omitempty"`
+	LabelID                  *string `json:"labelId,omitempty"`
+	MEID                     *string `json:"meid,omitempty"`
+	PhoneNumber              *string `json:"phoneNumber,omitempty"`
+	Slot                     *string `json:"slot,omitempty"`
 }
 
 type MobileDeviceInventorySubsetProvisioningProfile struct {
-	DisplayName    string `json:"displayName"`
-	UUID           string `json:"uuid"`
-	ExpirationDate string `json:"expirationDate"`
+	DisplayName    *string `json:"displayName,omitempty"`
+	UUID           *string `json:"uuid,omitempty"`
+	ExpirationDate *string `json:"expirationDate,omitempty"`
 }
 
 type MobileDeviceInventorySubsetSharedUser struct {
-	ManagedAppleID string `json:"managedAppleId"`
-	LoggedIn       bool   `json:"loggedIn"`
-	DataToSync     bool   `json:"dataToSync"`
+	ManagedAppleID *string `json:"managedAppleId,omitempty"`
+	LoggedIn       *bool   `json:"loggedIn,omitempty"`
+	DataToSync     *bool   `json:"dataToSync,omitempty"`
 }
 
 type MobileDeviceInventorySubsetPurchashing struct {
-	Purchased           bool                                            `json:"purchased"`
-	Leased              bool                                            `json:"leased"`
-	PONumber            string                                          `json:"poNumber"`
-	Vendor              string                                          `json:"vendor"`
-	AppleCareID         string                                          `json:"appleCareId"`
-	PurchasePrice       string                                          `json:"purchasePrice"`
-	PurchasingAccount   string                                          `json:"purchasingAccount"`
-	PODate              string                                          `json:"poDate"`
-	WarrantyExpiresDate string                                          `json:"warrantyExpiresDate"`
-	LeaseExpiresData    string                                          `json:"leaseExpiresDate"`
-	LifeExpectancy      int                                             `json:"lifeExpectancy"`
-	PurchasingContact   string                                          `json:"purchasingContact"`
-	ExtensionAttributes []MobileDeviceInventorySubsetExtensionAttribute `json:"extensionAttributes"`
+	Purchased           *bool                                            `json:"purchased,omitempty"`
+	Leased              *bool                                            `json:"leased,omitempty"`
+	PONumber            *string                                          `json:"poNumber,omitempty"`
+	Vendor              *string                                          `json:"vendor,omitempty"`
+	AppleCareID         *string                                          `json:"appleCareId,omitempty"`
+	PurchasePrice       *string                                          `json:"purchasePrice,omitempty"`
+	PurchasingAccount   *string                                          `json:"purchasingAccount,omitempty"`
+	PODate              *string                                          `json:"poDate,omitempty"`
+	WarrantyExpiresDate *string                                          `json:"warrantyExpiresDate,omitempty"`
+	LeaseExpiresData    *string                                          `json:"leaseExpiresDate,omitempty"`
+	LifeExpectancy      *int                                             `json:"lifeExpectancy,omitempty"`
+	PurchasingContact   *string                                          `json:"purchasingContact,omitempty"`
+	ExtensionAttributes []*MobileDeviceInventorySubsetExtensionAttribute `json:"extensionAttributes,omitempty"`
 }
 
 type MobileDeviceInventorySubsetUserProfile struct {
-	DisplayName   string `json:"displayName"`
-	Version       string `json:"version"`
-	UUID          string `json:"uuid"`
-	Identifier    string `json:"identifier"`
-	Removable     bool   `json:"removable"`
-	LastInstalled string `json:"lastInstalled"`
-	Username      string `json:"username"`
+	DisplayName   *string `json:"displayName,omitempty"`
+	Version       *string `json:"version,omitempty"`
+	UUID          *string `json:"uuid,omitempty"`
+	Identifier    *string `json:"identifier,omitempty"`
+	Removable     *bool   `json:"removable,omitempty"`
+	LastInstalled *string `json:"lastInstalled,omitempty"`
+	Username      *string `json:"username,omitempty"`
 }
 
 func (c *Client) GetMobileDevicesInventory(params url.Values) (*ResponseMobileDeviceInventoryList, error) {
-	resp, err := c.DoPaginatedGet(uriMobileDevices, params)
+	endpoint := fmt.Sprintf("%s/detail", uriMobileDevicesInventory)
+	resp, err := c.DoPaginatedGet(endpoint, params)
 
 	if err != nil {
 		return nil, fmt.Errorf(errMsgFailedPaginatedGet, "mobile-devices", err)
@@ -338,7 +339,7 @@ func (c *Client) GetMobileDeviceInventoryByName(name string) (*ResourceMobileDev
 	}
 
 	for _, inventory := range inventories.Results {
-		if inventory.General.DisplayName == name {
+		if *inventory.General.DisplayName == name {
 			return &inventory, nil
 		}
 	}

@@ -27,7 +27,7 @@ type ResponseMobileDeviceInventoryList struct {
 }
 
 type ResourceMobileDeviceInventory struct {
-	ID                   *string                                           `json:"mobileDeviceId,omitempty"`
+	ID                   *string                                           `json:"mobileDeviceId"`
 	DeviceType           *string                                           `json:"deviceType,omitempty"`
 	Hardware             *MobileDeviceInventorySubsetHardware              `json:"hardware,omitempty"`
 	UserAndLocation      *MobileDeviceInventorySubsetUserAndLocation       `json:"userAndLocation,omitempty"`

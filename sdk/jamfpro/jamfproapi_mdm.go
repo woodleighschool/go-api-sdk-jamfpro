@@ -73,6 +73,8 @@ type CommandData struct {
 	// Set_Auto_Admin_Password
 	GUID     string `json:"guid,omitempty"`
 	Password string `json:"password,omitempty"`
+	// Set_Recovery_Lock
+	NewPassword string `json:"newPassword,omitempty"`
 }
 
 // ReturnToService represents the return to service structure in the erase device command

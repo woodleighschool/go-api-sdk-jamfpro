@@ -37,44 +37,44 @@ type ClientData struct {
 type CommandData struct {
 	CommandType string `json:"commandType"`
 	// Delete_User
-	UserName       string `json:"userName,omitempty"`
-	ForceDeletion  bool   `json:"forceDeletion,omitempty"`
-	DeleteAllUsers bool   `json:"deleteAllUsers,omitempty"`
+	UserName       *string `json:"userName,omitempty"`
+	ForceDeletion  *bool   `json:"forceDeletion,omitempty"`
+	DeleteAllUsers *bool   `json:"deleteAllUsers,omitempty"`
 	// Enable_Lost_Mode
-	LostModeMessage  string `json:"lostModeMessage,omitempty"`
-	LostModePhone    string `json:"lostModePhone,omitempty"`
-	LostModeFootnote string `json:"lostModeFootnote,omitempty"`
+	LostModeMessage  *string `json:"lostModeMessage,omitempty"`
+	LostModePhone    *string `json:"lostModePhone,omitempty"`
+	LostModeFootnote *string `json:"lostModeFootnote,omitempty"`
 	// Erase_Device
 	ReturnToService        *ReturnToService `json:"returnToService,omitempty"`
-	PreserveDataPlan       bool             `json:"preserveDataPlan,omitempty"`
-	DisallowProximitySetup bool             `json:"disallowProximitySetup,omitempty"`
-	PIN                    string           `json:"pin,omitempty"`
-	ObliterationBehavior   string           `json:"obliterationBehavior,omitempty"`
+	PreserveDataPlan       *bool            `json:"preserveDataPlan,omitempty"`
+	DisallowProximitySetup *bool            `json:"disallowProximitySetup,omitempty"`
+	PIN                    *string          `json:"pin,omitempty"`
+	ObliterationBehavior   *string          `json:"obliterationBehavior,omitempty"`
 	// Restart_Device
-	RebuildKernelCache bool     `json:"rebuildKernelCache,omitempty"`
-	KextPaths          []string `json:"kextPaths,omitempty"`
-	NotifyUser         bool     `json:"notifyUser,omitempty"`
+	RebuildKernelCache *bool     `json:"rebuildKernelCache,omitempty"`
+	KextPaths          []*string `json:"kextPaths,omitempty"`
+	NotifyUser         *bool     `json:"notifyUser,omitempty"`
 	// Settings
 	ApplicationAttributes     *ApplicationAttributes     `json:"applicationAttributes,omitempty"`
 	SharedDeviceConfiguration *SharedDeviceConfiguration `json:"sharedDeviceConfiguration,omitempty"`
 	ApplicationConfiguration  *ApplicationConfiguration  `json:"applicationConfiguration,omitempty"`
 	SoftwareUpdateSettings    *SoftwareUpdateSettings    `json:"softwareUpdateSettings,omitempty"`
-	BootstrapTokenAllowed     bool                       `json:"bootstrapTokenAllowed,omitempty"`
-	Bluetooth                 bool                       `json:"bluetooth,omitempty"`
-	AppAnalytics              string                     `json:"appAnalytics,omitempty"`
-	DiagnosticSubmission      string                     `json:"diagnosticSubmission,omitempty"`
-	DataRoaming               string                     `json:"dataRoaming,omitempty"`
-	VoiceRoaming              string                     `json:"voiceRoaming,omitempty"`
-	PersonalHotspot           string                     `json:"personalHotspot,omitempty"`
-	MaximumResidentUsers      int                        `json:"maximumResidentUsers,omitempty"`
-	DeviceName                string                     `json:"deviceName,omitempty"`
-	TimeZone                  string                     `json:"timeZone,omitempty"`
-	PasscodeLockGracePeriod   int                        `json:"passcodeLockGracePeriod,omitempty"`
+	BootstrapTokenAllowed     *bool                      `json:"bootstrapTokenAllowed,omitempty"`
+	Bluetooth                 *bool                      `json:"bluetooth,omitempty"`
+	AppAnalytics              *string                    `json:"appAnalytics,omitempty"`
+	DiagnosticSubmission      *string                    `json:"diagnosticSubmission,omitempty"`
+	DataRoaming               *string                    `json:"dataRoaming,omitempty"`
+	VoiceRoaming              *string                    `json:"voiceRoaming,omitempty"`
+	PersonalHotspot           *string                    `json:"personalHotspot,omitempty"`
+	MaximumResidentUsers      *int                       `json:"maximumResidentUsers,omitempty"`
+	DeviceName                *string                    `json:"deviceName,omitempty"`
+	TimeZone                  *string                    `json:"timeZone,omitempty"`
+	PasscodeLockGracePeriod   *int                       `json:"passcodeLockGracePeriod,omitempty"`
 	// Set_Auto_Admin_Password
-	GUID     string `json:"guid,omitempty"`
-	Password string `json:"password,omitempty"`
+	GUID     *string `json:"guid,omitempty"`
+	Password *string `json:"password,omitempty"`
 	// Set_Recovery_Lock
-	NewPassword string `json:"newPassword,omitempty"`
+	NewPassword *string `json:"newPassword,omitempty"`
 }
 
 // ReturnToService represents the return to service structure in the erase device command

@@ -184,11 +184,11 @@ func (c *Client) SendMDMCommandForBlankPush(clientManagementIDs []string) (*Resp
 }
 
 // SendMDMCommandForCreationAndQueuing sends an MDM command for creation and queuing
-func (c *Client) SendMDMCommandForCreationAndQueuing(MDMCommand *ResourceMDMCommandRequest) (*ResponseMDMCommand, error) {
+func (c *Client) SendMDMCommandForCreationAndQueuing(MDMCommand *ResourceMDMCommandRequest) ([]*ResponseMDMCommand, error) {
 	endpoint := uriMDMCommands
-	var responseMDMCommand ResponseMDMCommand
+	var responsesMDMCommand []*ResponseMDMCommand
 
-	resp, err := c.HTTP.DoRequest("POST", endpoint, MDMCommand, &responseMDMCommand)
+	resp, err := c.HTTP.DoRequest("POST", endpoint, MDMCommand, &responsesMDMCommand)
 	if err != nil {
 		return nil, fmt.Errorf(errMsgFailedCreate, "send MDM Command", err)
 	}
@@ -197,7 +197,7 @@ func (c *Client) SendMDMCommandForCreationAndQueuing(MDMCommand *ResourceMDMComm
 		defer resp.Body.Close()
 	}
 
-	return &responseMDMCommand, nil
+	return responsesMDMCommand, nil
 }
 
 // SendMDMCommandForPackageDeployment deploys a package using an MDM command
